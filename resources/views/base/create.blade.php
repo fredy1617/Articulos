@@ -37,7 +37,7 @@
 	                @endif
 	        </div>
 	        <div class="form-group{{ $errors->has('tipo') ? ' has-error' : '' }}">
-				{{Form::select('tipo', ['' => 'Seleccione un tipo: ', '625' => '625', 'Application' => 'Application', 'Energy Source' => 'Energy Source', 'Report' => 'Report', 'Review' => 'Review', 'Theorist' => 'Theorist', 'Tool' => 'Tool', 'Other' => 'Other'], null, ['class'=>'form-control'])}}
+				{{Form::select('tipo', ['' => 'Seleccione un tipo: ', 'Application' => 'Application', 'Energy Source' => 'Energy Source', 'Report' => 'Report', 'Review' => 'Review', 'Theorist' => 'Theorist', 'Tool' => 'Tool', 'Other' => 'Other'], null, ['class'=>'form-control'])}}
 					@if ($errors->has('tipo'))
 	                    <small class="text-danger">
 		                    <strong>{{ $errors->first('tipo') }}</strong>

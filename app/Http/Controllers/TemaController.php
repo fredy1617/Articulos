@@ -87,9 +87,7 @@ class TemaController extends Controller
         
         $bases=Base::orderBy('titulo', 'ASC')->pluck('titulo', 'id');
         $base = Base::find($id);
-        if ($base->tipo=="625") {
-            $lista=[ '623' => '623'];
-        }
+        
         if ($base->tipo=="Application") {
             $lista=[ 'DSO' => 'DSO', 'EneSou' => 'EneSou', 'EneSys' => 'EneSys', 'ESS' => 'ESS', 'GEP'  => 'GEP', 'Other' => 'Other' , 'Power Dispatch'  => 'Power Dispatch' , 'Power Flow'  => 'Power Flow', 'Escenarios analysis' => 'Escenarios analysis' , 'TEP' => 'TEP'];
         }

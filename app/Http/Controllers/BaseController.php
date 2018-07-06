@@ -84,7 +84,7 @@ class BaseController extends Controller
     {
         $base = Base::find($id);
         $base->revista;
-        if ($base->tipo=="625") {
+        if ($base->tipo=="Other") {
             $ruta='/Form1/create';
         }
         if ($base->tipo=="Application") {
