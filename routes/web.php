@@ -27,12 +27,6 @@ Route::resource('Form5', 'Form5Controller');
 Route::resource('Form6', 'Form6Controller');
 Route::resource('Form7', 'Form7Controller');
 
-Route::resource('categoria', 'CategoriaController');
-
-Route::resource('proveedor', 'ProveedorController');
-
-Route::resource('producto', 'ProductoController');
-
 
 Route::get('/home', 'HomeController@index')->name('home');
 
