@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use App\Form3;
+use App\Base;
 
 class Form3Controller extends Controller
 {
@@ -14,7 +16,7 @@ class Form3Controller extends Controller
      */
     public function index()
     {
-        //
+        return view("Form3.index");
     }
 
     /**
@@ -24,7 +26,10 @@ class Form3Controller extends Controller
      */
     public function create()
     {
-        return view("Form3.create");
+        $form3 = new Form3;
+        $bases=Base::orderBy('titulo', 'ASC')->pluck('titulo', 'id');
+        
+        return view("Form3.create", ["form3" => $form3])->with('bases', $bases);
     }
 
     /**
@@ -35,7 +40,30 @@ class Form3Controller extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $form3 = new Form3;
+        $form3->id_info=$request->id_info;
+        $form3->Country=$request->Country;
+
+        $autor->Focus=$request->Focus;
+        $autor->Tecnology=$request->Tecnology;
+        $autor->Economic=$request->Economic;
+        $autor->Environment=$request->Environment;
+        $autor->Social=$request->Social;
+        
+        if ($request->Other==null) {
+            $request->Other=" ";
+        }
+        
+        $autor->Other=$request->Other;
+        $autor->Keyboard=$request->Keyboard;
+        $autor->Abstract=$request->Abstract;
+        $autor->save();
+
+        if($autor->save()){
+            return redirect("/form3");
+        }else{
+            return view("form3.create");
+        }
     }
 
     /**

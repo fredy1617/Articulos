@@ -84,7 +84,7 @@ class BaseController extends Controller
     {
         $base = Base::find($id);
         $base->revista;
-        if ($base->tipo=="Other") {
+        if ($base->tipo=="Tool") {
             $ruta='/Form1/create';
         }
         if ($base->tipo=="Application") {
@@ -102,9 +102,7 @@ class BaseController extends Controller
         if ($base->tipo=="Theorist") {
             $ruta='/Form6/create';
         }
-        if ($base->tipo=="Tool") {
-            $ruta='/Form7/create';
-        }
+        
         return view("base.vistabase", ["base" => $base],["ruta" => $ruta]);
      }
 
