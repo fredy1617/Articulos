@@ -5,7 +5,7 @@
 @endsection
 @section("content")
 	<div class="container white">
-		<h1>Aqui va Formuario 1 (625)</h1>
+		<h1>Aqui va Formuario 1 (Tool)</h1>
 
 	</div>
 @endsection

@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Form5 extends Model
 {
-    protected $table = 'forms4';
+    protected $table = 'forms5';
 
     protected $fillable = [
     	'id_info','Focus', 'Methodology','Models','Solvers','Keyboard','Abstract',

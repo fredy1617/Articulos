@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use App\Form6;
+use App\Base;
 
 class Form6Controller extends Controller
 {
@@ -14,7 +16,7 @@ class Form6Controller extends Controller
      */
     public function index()
     {
-        //
+        return view("Form5.index");
     }
 
     /**
@@ -24,7 +26,10 @@ class Form6Controller extends Controller
      */
     public function create()
     {
-        return view("Form6.create");
+        $form6 = new Form6;
+        $bases=Base::orderBy('titulo', 'ASC')->pluck('titulo', 'id');
+        
+        return view("Form5.create", ["form6" => $form6])->with('bases', $bases);
     }
 
     /**
@@ -35,18 +40,16 @@ class Form6Controller extends Controller
      */
     public function store(Request $request)
     {
-        //
-    }
+        $form6 = new Form6;
+        $form6->id_info=$request->id_info;
+        $form6->Algorithms_Tecnologies=$request->Algorithms_Tecnologies;
+        $form6->save();
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function show($id)
-    {
-        //
+        if($form6->save()){
+            return redirect("/form6");
+        }else{
+            return view("form6.create");
+        }
     }
 
     /**
