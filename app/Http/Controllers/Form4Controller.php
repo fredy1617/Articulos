@@ -4,7 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
-
+use App\Form4;
+use App\Base;
 class Form4Controller extends Controller
 {
     /**
@@ -14,7 +15,7 @@ class Form4Controller extends Controller
      */
     public function index()
     {
-        //
+        return view("Form4.index");
     }
 
     /**
@@ -24,7 +25,10 @@ class Form4Controller extends Controller
      */
     public function create()
     {
-        return view("Form4.create");
+        $form4= new Form4;
+        $bases=Base::orderBy('titulo', 'ASC')->pluck('titulo', 'id');
+        
+        return view("Form4.create", ["form4" => $form4])->with('bases', $bases);
     }
 
     /**
@@ -35,9 +39,21 @@ class Form4Controller extends Controller
      */
     public function store(Request $request)
     {
-        //
-    }
+        $form4 = new Form4;
+        $form4->id_info=$request->id_info;
+        $form4->Country=$request->Country;
 
+        $form4->Focus=$request->Focus;
+        $form4->Agency=$request->Agency;
+        
+        $form4->save();
+
+        if($form4->save()){
+            return redirect("/form3");
+        }else{
+            return view("form3.create");
+        }
+    }
     /**
      * Display the specified resource.
      *

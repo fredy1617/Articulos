@@ -44,22 +44,22 @@ class Form3Controller extends Controller
         $form3->id_info=$request->id_info;
         $form3->Country=$request->Country;
 
-        $autor->Focus=$request->Focus;
-        $autor->Tecnology=$request->Tecnology;
-        $autor->Economic=$request->Economic;
-        $autor->Environment=$request->Environment;
-        $autor->Social=$request->Social;
+        $->Focus=$request->Focus;
+        $form3->Tecnology=$request->Tecnology;
+        $form3->Economic=$request->Economic;
+        $form3->Environment=$request->Environment;
+        $form3->Social=$request->Social;
         
         if ($request->Other==null) {
             $request->Other=" ";
         }
         
-        $autor->Other=$request->Other;
-        $autor->Keyboard=$request->Keyboard;
-        $autor->Abstract=$request->Abstract;
-        $autor->save();
+        $form3->Other=$request->Other;
+        $form3->Keyboard=$request->Keyboard;
+        $form3->Abstract=$request->Abstract;
+        $form3->save();
 
-        if($autor->save()){
+        if($form3->save()){
             return redirect("/form3");
         }else{
             return view("form3.create");
