@@ -4,47 +4,33 @@
 @section('nav')
 @endsection
 
-@section("content")
-	<div class="container white">
-		<h1>Completar Informacion</h1>
-		
-		<!--formulario-->
-			{!! Form::open(['url'=> '/base/'.$base->id, 'method'=>'PATCH']) !!}
-		
-		<div class="container">
+@section('content')
+
+<div class="big-padding text-center blue-grey white-text">
+	<h1>Articulos</h1>
+</div>
+<div class="container">
 	<table class="table table-striped">
 		<thead>
-			<td>
-				<tr>ID</tr>
-				<tr>Revista</tr>
-				<tr>Acciones</tr>
-			</td>
+			<tr>
+				<td>ID</td>
+				<td>Nombre</td>
+				<td></td>
+			</tr>
 		</thead>
 		<tbody>
-			@foreach ($revistas as $revista)
+			@foreach ($base as $bases)
 			<tr>
-				<td>{{ $revista->id }}</td>
-				<td>{{ $revista->nombre }}</td>
+				<td>{{ $bases->id}}</td>
+				<td>{{ $bases->nombre}}</td>
 				<td>
-					<a type="button" class="btn btn-outline-info" href="{{url('/revista/'.$revista->id.'/edit')}}">Editar</a>
-
+					<a type="button" class="btn btn-outline-info" href="{{url('#')}}">Mas</a>
 				</td>
 			</tr>
 			@endforeach
 		</tbody>
 	</table>
 </div>
-			{!! Form::close() !!}
-
-	</div>
-
-@endsection
-
-@section('content')
-<div class="big-padding text-center blue-grey white-text">
-	<h1>Revistas</h1>
-</div>
-<a class="btn btn-outline-success" href="{{url('/revista/create')}}" role="button">Agregar</a>
 
 
 @endsection

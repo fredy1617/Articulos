@@ -17,8 +17,10 @@ class BaseController extends Controller
     public function index()
     {
         $base = Base::all();
+
         $base->each(function($base){
             $base->revista;
+            dd($base->revista);
 
         });
         

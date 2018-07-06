@@ -27,6 +27,9 @@ Route::resource('Form5', 'Form5Controller');
 Route::resource('Form6', 'Form6Controller');
 Route::resource('Form7', 'Form7Controller');
 
+Route::get('/getImport','ExcelController@getImport');
+Route::post('/postImport','ExcelController@postImport');
+Route::resource('inicio', 'ExcelController');
 
 Route::get('/home', 'HomeController@index')->name('home');
 
