@@ -44,7 +44,7 @@ class Form3Controller extends Controller
         $form3->id_info=$request->id_info;
         $form3->Country=$request->Country;
 
-        $->Focus=$request->Focus;
+        $form3->Focus=$request->Focus;
         $form3->Tecnology=$request->Tecnology;
         $form3->Economic=$request->Economic;
         $form3->Environment=$request->Environment;

@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use App\Form5;
+use App\Base;
 
 class Form5Controller extends Controller
 {
@@ -14,7 +16,7 @@ class Form5Controller extends Controller
      */
     public function index()
     {
-        //
+        return view("Form5.index");
     }
 
     /**
@@ -24,7 +26,10 @@ class Form5Controller extends Controller
      */
     public function create()
     {
-        return view("Form5.create");
+        $form5 = new Form5;
+        $bases=Base::orderBy('titulo', 'ASC')->pluck('titulo', 'id');
+        
+        return view("Form5.create", ["form5" => $form5])->with('bases', $bases);
     }
 
     /**
@@ -35,19 +40,23 @@ class Form5Controller extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $form5 = new Form5;
+        $form5->id_info=$request->id_info;
+        $form5->Focus=$request->Focus;
+        $form5->Methodology=$request->Methodology;
+        $form5->Models=$request->Models;
+        $form5->Solvers=$request->Solvers;
+        $form5->Keyboard=$request->Keyboard;
+        $form5->Abstract=$request->Abstract;
+        $form5->save();
+
+        if($form5->save()){
+            return redirect("/form5");
+        }else{
+            return view("form5.create");
+        }
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function show($id)
-    {
-        //
-    }
 
     /**
      * Show the form for editing the specified resource.
