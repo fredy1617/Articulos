@@ -29,7 +29,7 @@ class Form6Controller extends Controller
         $form6 = new Form6;
         $bases=Base::orderBy('titulo', 'ASC')->pluck('titulo', 'id');
         
-        return view("Form5.create", ["form6" => $form6])->with('bases', $bases);
+        return view("Form6.create", ["form6" => $form6])->with('bases', $bases);
     }
 
     /**
@@ -42,6 +42,12 @@ class Form6Controller extends Controller
     {
         $form6 = new Form6;
         $form6->id_info=$request->id_info;
+
+        $form6->Tema1=$request->Tema1;
+        $form6->Tema2=$request->Tema2;
+        $form6->Tema3=$request->Tema3;
+        $form6->Tema4=$request->Tema4;
+
         $form6->Algorithms_Tecnologies=$request->Algorithms_Tecnologies;
         $form6->save();
 

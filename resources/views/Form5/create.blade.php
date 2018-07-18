@@ -17,7 +17,35 @@
 	                    </small>
 	                @endif
 	        </div>
+			<div class="form-group{{ $errors->has('Tema1','Tema2','Tema3','Tema4') ? ' has-error' : '' }}">
 			
+				{{Form::select('Tema1', [ 'Demand Forecast' => 'Demand Forecast', 'EneSys' => 'EneSys', 'ESS' => 'ESS', 'GEP' => 'GEP', 'Indicators' => 'Indicators',  'Market' => 'Market', 'Other' => 'Other', 'Policies' => 'Policies', 'RenEne' => 'RenEne', 'TEP'=> 'TEP', 'Tools' => 'Tools'], null, ['class' => 'btn btn-default dropdown-toggle', 'placeholder'=>'Tema1 '] )}}
+					@if ($errors->has('Tema1'))
+	                    <small class="text-danger">
+		                    <strong>{{ $errors->first('Tema1') }}</strong>
+	                    </small>
+	                @endif
+
+				{{Form::select('Tema2', [ 'Demand Forecast' => 'Demand Forecast', 'EneSys' => 'EneSys', 'ESS' => 'ESS', 'GEP' => 'GEP', 'Indicators' => 'Indicators',  'Market' => 'Market', 'Other' => 'Other', 'Policies' => 'Policies', 'RenEne' => 'RenEne', 'TEP'=> 'TEP', 'Tools' => 'Tools'], null, ['class' => 'btn btn-default dropdown-toggle', 'placeholder'=>'Tema2 '] )}}
+					@if ($errors->has('Tema2'))
+	                    <small class="text-danger">
+		                    <strong>{{ $errors->first('Tema2') }}</strong>
+	                    </small>
+	                @endif
+
+	            {{Form::select('Tema3', [ 'Demand Forecast' => 'Demand Forecast', 'EneSys' => 'EneSys', 'ESS' => 'ESS', 'GEP' => 'GEP', 'Indicators' => 'Indicators',  'Market' => 'Market', 'Other' => 'Other', 'Policies' => 'Policies', 'RenEne' => 'RenEne', 'TEP'=> 'TEP', 'Tools' => 'Tools'], null, ['class' => 'btn btn-default dropdown-toggle', 'placeholder'=>'Tema3 '] )}}
+					@if ($errors->has('Tema3'))
+	                    <small class="text-danger">
+		                    <strong>{{ $errors->first('Tema3') }}</strong>
+	                    </small>
+	                @endif
+	            {{Form::select('Tema4', [ 'Demand Forecast' => 'Demand Forecast', 'EneSys' => 'EneSys', 'ESS' => 'ESS', 'GEP' => 'GEP', 'Indicators' => 'Indicators',  'Market' => 'Market', 'Other' => 'Other', 'Policies' => 'Policies', 'RenEne' => 'RenEne', 'TEP'=> 'TEP', 'Tools' => 'Tools'], null, ['class' => 'btn btn-default dropdown-toggle', 'placeholder'=>'Tema4 '] )}}
+					@if ($errors->has('Tema4'))
+	                    <small class="text-danger">
+		                    <strong>{{ $errors->first('Tema4') }}</strong>
+	                    </small>
+	                @endif
+	        </div>
         	<div class="form-group{{ $errors->has('Focus') ? ' has-error' : '' }}">
 	            {{Form::text('Focus', $form5->Focus, ['class'=>'form-control', 'placeholder'=>'Focus '])}}
 	                @if ($errors->has('Focus'))

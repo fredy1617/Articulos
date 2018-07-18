@@ -9,7 +9,7 @@
 
     <ul class="navbar-nav mr-auto">
         <li class="nav-item active">
-            <a class="nav-link" href="{{ url('/revista') }}">Revistas<span class="sr-only">(current)</span></a>
+            <a class="nav-link" href="{{ url('/inicio') }}">Revistas<span class="sr-only">(current)</span></a>
         </li>   
     </ul>
     <ul class="navbar-nav mr-auto">

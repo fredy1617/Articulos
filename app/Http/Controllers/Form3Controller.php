@@ -42,6 +42,12 @@ class Form3Controller extends Controller
     {
         $form3 = new Form3;
         $form3->id_info=$request->id_info;
+
+        $form3->Tema1=$request->Tema1;
+        $form3->Tema2=$request->Tema2;
+        $form3->Tema3=$request->Tema3;
+        $form3->Tema4=$request->Tema4;
+
         $form3->Country=$request->Country;
 
         $form3->Focus=$request->Focus;
@@ -50,9 +56,7 @@ class Form3Controller extends Controller
         $form3->Environment=$request->Environment;
         $form3->Social=$request->Social;
         
-        if ($request->Other==null) {
-            $request->Other=" ";
-        }
+        if ($request->Other==null) { $request->Other=" "; }
         
         $form3->Other=$request->Other;
         $form3->Keyboard=$request->Keyboard;

@@ -9,11 +9,11 @@ class Base extends Model
     protected $table = 'bases';
 
     protected $fillable = [
-    	'titulo', 'año', 'id_revista', 'tipo',
+    	'titulo', 'year', 'id_revista', 'tipo',
     ];
 
     protected $hidden = [
-    	'titulo', 'año', 'id_revista', 'tipo',
+    	'titulo', 'year', 'id_revista', 'tipo',
     ];
 
     public function revista()

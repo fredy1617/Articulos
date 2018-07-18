@@ -9,11 +9,11 @@ class Form5 extends Model
     protected $table = 'forms5';
 
     protected $fillable = [
-    	'id_info','Focus', 'Methodology','Models','Solvers','Keyboard','Abstract',
+    	'id_info','Tema1', 'Tema2', 'Tema3','Tema4','Focus', 'Methodology','Models','Solvers','Keyboard','Abstract',
     ];
 
     protected $hidden = [
-    	'id_info','Focus', 'Methodology','Models','Solvers','Keyboard','Abstract',
+    	'id_info','Tema1', 'Tema2', 'Tema3','Tema4','Focus', 'Methodology','Models','Solvers','Keyboard','Abstract',
     ];
 
     public function bases()

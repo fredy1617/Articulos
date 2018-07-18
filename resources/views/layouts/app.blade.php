@@ -22,6 +22,7 @@
 
 <main role="main" class="container">
     <div class="jumbotron">
+        {{ csrf_field() }}
         @yield('content')
     </div>
 </main>

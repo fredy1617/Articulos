@@ -20,7 +20,6 @@ class BaseController extends Controller
 
         $base->each(function($base){
             $base->revista;
-            dd($base->revista);
 
         });
         
@@ -51,7 +50,7 @@ class BaseController extends Controller
         $base = new Base;
         
         $base->titulo=$request->titulo;
-        $base->año=$request->año;
+        $base->year=$request->year;
         $base->id_revista=$request->id_revista;
         $base->tipo=$request->tipo;
         
@@ -59,7 +58,7 @@ class BaseController extends Controller
         $base->save();
 
         if($base->save()){
-            return redirect("/infobase/".$base->id."/edit");
+            return redirect("/infobase/");
         }else{
             return view("base.create");
         }
@@ -86,25 +85,15 @@ class BaseController extends Controller
     {
         $base = Base::find($id);
         $base->revista;
-        if ($base->tipo=="Tool") {
-            $ruta='/Form1/create';
-        }
-        if ($base->tipo=="Application") {
-            $ruta='/Form2/create';
-        }
-        if ($base->tipo=="Energy Source") {
-            $ruta='/Form3/create';
-        }
-        if ($base->tipo=="Report") {
-            $ruta='/Form4/create';
-        }
-        if ($base->tipo=="Review") {
-            $ruta='/Form5/create';
-        }
-        if ($base->tipo=="Theorist") {
-            $ruta='/Form6/create';
-        }
-        
+
+        if ($base->tipo=="Pending") { $ruta='#'; }
+        if ($base->tipo=="Tool") { $ruta='/Form1/create'; }
+        if ($base->tipo=="Application") { $ruta='/Form2/create'; }
+        if ($base->tipo=="Energy Source") { $ruta='/Form3/create'; }
+        if ($base->tipo=="Report") { $ruta='/Form4/create'; }
+        if ($base->tipo=="Review") { $ruta='/Form5/create'; }
+        if ($base->tipo=="Theorist") { $ruta='/Form6/create'; }
+
         return view("base.vistabase", ["base" => $base],["ruta" => $ruta]);
      }
 
@@ -117,7 +106,16 @@ class BaseController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+         $base = Base::find($id);
+        
+        $base->tipo=$request->tipo;
+        
+        
+        if($base->save()){
+            return redirect('/infobase/'.$base->id.'/edit');
+        }else{
+            return view("base.edit");
+        }
     }
 
     /**

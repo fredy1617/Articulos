@@ -19,17 +19,16 @@ class CreateAutoresTable extends Migration
             $table->integer('id_info')->unsigned();
             $table->foreign('id_info')->references('id')->on('bases');
             
-            $table->string('Autor1');
-            $table->string('Autor2');
-            $table->string('Autor3');
-            $table->string('Autor4');
-            $table->string('Autor5');
-
-            $table->string('Autor6');
-            $table->string('Autor7');
-            $table->string('Autor8');
-            $table->string('Autor9');
-            $table->string('Autor10');
+            $table->string('Nombre_1');
+            $table->string('Apellido_1');
+            $table->string('Nombre_2');
+            $table->string('Apellido_2');
+            $table->string('Nombre_3');
+            $table->string('Apellido_3');
+            $table->string('Nombre_4');
+            $table->string('Apellido_4');
+            $table->string('Nombre_5');
+            $table->string('Apellido_5');
             $table->timestamps();
         });
     }

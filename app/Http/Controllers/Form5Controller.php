@@ -42,6 +42,12 @@ class Form5Controller extends Controller
     {
         $form5 = new Form5;
         $form5->id_info=$request->id_info;
+
+        $form5->Tema1=$request->Tema1;
+        $form5->Tema2=$request->Tema2;
+        $form5->Tema3=$request->Tema3;
+        $form5->Tema4=$request->Tema4;
+
         $form5->Focus=$request->Focus;
         $form5->Methodology=$request->Methodology;
         $form5->Models=$request->Models;

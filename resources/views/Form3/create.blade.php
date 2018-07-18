@@ -17,6 +17,35 @@
 	                    </small>
 	                @endif
 	        </div>
+	        <div class="form-group{{ $errors->has('Tema1','Tema2','Tema3','Tema4') ? ' has-error' : '' }}">
+			
+				{{Form::select('Tema1', ['Biomass' => 'Biomass', 'Create BBDD' => 'Create BBDD', 'Economic' => 'Economic', 'Employment' => 'Employment', 'Input' => 'Input', 'Nuclear' => 'Nuclear', 'Parameters' => 'Parameters', 'Photovoltaic' => 'Photovoltaic', 'Waste' => 'Waste', 'Water use' => 'Water use', 'Wind' =>  'Wind', 'Wind/Mexico' => 'Wind/Mexico', 'Wind/PV/CSP' => 'Wind/PV/CSP', 'Employment' => 'Employment', 'WindEmployment' => 'WindEmployment'], null, ['class' => 'btn btn-default dropdown-toggle', 'placeholder'=>'Tema1 '] )}}
+					@if ($errors->has('Tema1'))
+	                    <small class="text-danger">
+		                    <strong>{{ $errors->first('Tema1') }}</strong>
+	                    </small>
+	                @endif
+
+				{{Form::select('Tema2', ['Biomass' => 'Biomass', 'Create BBDD' => 'Create BBDD', 'Economic' => 'Economic', 'Employment' => 'Employment', 'Input' => 'Input', 'Nuclear' => 'Nuclear', 'Parameters' => 'Parameters', 'Photovoltaic' => 'Photovoltaic', 'Waste' => 'Waste', 'Water use' => 'Water use', 'Wind' =>  'Wind', 'Wind/Mexico' => 'Wind/Mexico', 'Wind/PV/CSP' => 'Wind/PV/CSP', 'Employment' => 'Employment', 'WindEmployment' => 'WindEmployment'], null, ['class' => 'btn btn-default dropdown-toggle', 'placeholder'=>'Tema2 '] )}}
+					@if ($errors->has('Tema2'))
+	                    <small class="text-danger">
+		                    <strong>{{ $errors->first('Tema2') }}</strong>
+	                    </small>
+	                @endif
+
+	            {{Form::select('Tema3', ['Biomass' => 'Biomass', 'Create BBDD' => 'Create BBDD', 'Economic' => 'Economic', 'Employment' => 'Employment', 'Input' => 'Input', 'Nuclear' => 'Nuclear', 'Parameters' => 'Parameters', 'Photovoltaic' => 'Photovoltaic', 'Waste' => 'Waste', 'Water use' => 'Water use', 'Wind' =>  'Wind', 'Wind/Mexico' => 'Wind/Mexico', 'Wind/PV/CSP' => 'Wind/PV/CSP', 'Employment' => 'Employment', 'WindEmployment' => 'WindEmployment'], null, ['class' => 'btn btn-default dropdown-toggle', 'placeholder'=>'Tema3 '] )}}
+					@if ($errors->has('Tema3'))
+	                    <small class="text-danger">
+		                    <strong>{{ $errors->first('Tema3') }}</strong>
+	                    </small>
+	                @endif
+	            {{Form::select('Tema4', ['Biomass' => 'Biomass', 'Create BBDD' => 'Create BBDD', 'Economic' => 'Economic', 'Employment' => 'Employment', 'Input' => 'Input', 'Nuclear' => 'Nuclear', 'Parameters' => 'Parameters', 'Photovoltaic' => 'Photovoltaic', 'Waste' => 'Waste', 'Water use' => 'Water use', 'Wind' =>  'Wind', 'Wind/Mexico' => 'Wind/Mexico', 'Wind/PV/CSP' => 'Wind/PV/CSP', 'Employment' => 'Employment', 'WindEmployment' => 'WindEmployment'], null, ['class' => 'btn btn-default dropdown-toggle', 'placeholder'=>'Tema4 '] )}}
+					@if ($errors->has('Tema4'))
+	                    <small class="text-danger">
+		                    <strong>{{ $errors->first('Tema4') }}</strong>
+	                    </small>
+	                @endif
+	        </div>
 			<div class="form-group{{ $errors->has('Country') ? ' has-error' : '' }}">
 	            {{Form::text('Country', $form3->Country, ['class'=>'form-control', 'placeholder'=>'Country'])}}
 	                @if ($errors->has('Country'))

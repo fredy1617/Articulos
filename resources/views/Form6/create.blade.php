@@ -17,7 +17,35 @@
 	                    </small>
 	                @endif
 	        </div>
+			<div class="form-group{{ $errors->has('Tema1','Tema2','Tema3','Tema4') ? ' has-error' : '' }}">
 			
+				{{Form::select('Tema1', [ 'NSGA - II' => 'NSGA - II', 'SORENSEN' => 'SORENSEN'], null, ['class' => 'btn btn-default dropdown-toggle', 'placeholder'=>'Tema1 '] )}}
+					@if ($errors->has('Tema1'))
+	                    <small class="text-danger">
+		                    <strong>{{ $errors->first('Tema1') }}</strong>
+	                    </small>
+	                @endif
+
+				{{Form::select('Tema2', [ 'NSGA - II' => 'NSGA - II', 'SORENSEN' => 'SORENSEN'], null, ['class' => 'btn btn-default dropdown-toggle', 'placeholder'=>'Tema2 '] )}}
+					@if ($errors->has('Tema2'))
+	                    <small class="text-danger">
+		                    <strong>{{ $errors->first('Tema2') }}</strong>
+	                    </small>
+	                @endif
+
+	            {{Form::select('Tema3', [ 'NSGA - II' => 'NSGA - II', 'SORENSEN' => 'SORENSEN'], null, ['class' => 'btn btn-default dropdown-toggle', 'placeholder'=>'Tema3 '] )}}
+					@if ($errors->has('Tema3'))
+	                    <small class="text-danger">
+		                    <strong>{{ $errors->first('Tema3') }}</strong>
+	                    </small>
+	                @endif
+	            {{Form::select('Tema4', [ 'NSGA - II' => 'NSGA - II', 'SORENSEN' => 'SORENSEN'], null, ['class' => 'btn btn-default dropdown-toggle', 'placeholder'=>'Tema4 '] )}}
+					@if ($errors->has('Tema4'))
+	                    <small class="text-danger">
+		                    <strong>{{ $errors->first('Tema4') }}</strong>
+	                    </small>
+	                @endif
+	        </div>
         	<div class="form-group{{ $errors->has('Algorithms_Tecnologies') ? ' has-error' : '' }}">
 	            {{Form::text('Algorithms_Tecnologies', $form6->Algorithms_Tecnologies, ['class'=>'form-control', 'placeholder'=>'Algorithms/Tecnologies '])}}
 	                @if ($errors->has('Algorithms_Tecnologies'))

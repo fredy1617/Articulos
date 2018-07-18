@@ -25,11 +25,11 @@
 			@foreach ($base as $bases)
 			<tr>
 				<td>{{ $bases->titulo}}</td>
-				<td>{{ $bases->año}}</td>
-				<td>{{ $bases->revista}}</td>
+				<td>{{ $bases->year}}</td>
+				<td>{{ $bases->id_revista}}</td>
 				<td>{{ $bases->tipo}}</td>
 				<td>
-					<a type="button" class="btn btn-outline-info" href="{{url('#')}}">Mas</a>
+					<a type="button" class="btn btn-outline-info" href="{{url('/infobase/'.$bases->id.'/edit')}}">Editar</a>
 				</td>
 			</tr>
 			@endforeach

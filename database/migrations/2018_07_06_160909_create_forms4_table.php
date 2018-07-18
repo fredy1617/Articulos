@@ -18,6 +18,11 @@ class CreateForms4Table extends Migration
 
             $table->integer('id_info')->unsigned();
             $table->foreign('id_info')->references('id')->on('bases');
+
+            $table->string('Tema1');
+            $table->string('Tema2');
+            $table->string('Tema3');
+            $table->string('Tema4');
             
             $table->string('Country');
             $table->string('Focus');

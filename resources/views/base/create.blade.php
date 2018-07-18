@@ -17,11 +17,11 @@
 	                    </small>
 	                @endif
         	</div>
-        	<div class="form-group{{ $errors->has('año') ? ' has-error' : '' }}">
-				{{Form::text('año', $base->año, ['class'=>'form-control', 'placeholder'=>'año...'])}}
-					@if ($errors->has('año'))
+        	<div class="form-group{{ $errors->has('year') ? ' has-error' : '' }}">
+				{{Form::text('year', $base->year, ['class'=>'form-control', 'placeholder'=>'year...'])}}
+					@if ($errors->has('year'))
 	                    <small class="text-danger">
-		                    <strong>{{ $errors->first('año') }}</strong>
+		                    <strong>{{ $errors->first('year') }}</strong>
 	                    </small>
 	                @endif
 	        </div>

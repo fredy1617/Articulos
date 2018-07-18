@@ -9,11 +9,11 @@ class Autor extends Model
     protected $table = 'autores';
 
     protected $fillable = [
-    	'id_info','autor1', 'autor2', 'autor3', 'autor4','autor5','autor6', 'autor7', 'autor8', '9','autor10', 
+    	'id_info','Nombre_1', 'Apellido_1', 'Nombre_2', 'Apellido_2','Nombre_3', 'Apellido_3','Nombre_4', 'Apellido_4','Nombre_5', 'Apellido_5',
     ];
 
     protected $hidden = [
-    	'id_info','autor1', 'autor2', 'autor3', 'autor4','autor5', 'autor6', 'autor7', 'autor8', '9','autor10', 
+        'id_info','Nombre_1', 'Apellido_1', 'Nombre_2', 'Apellido_2','Nombre_3', 'Apellido_3','Nombre_4', 'Apellido_4','Nombre_5', 'Apellido_5', 
     ];
 
     public function bases()

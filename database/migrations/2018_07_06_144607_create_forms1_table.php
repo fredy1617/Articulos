@@ -15,6 +15,22 @@ class CreateForms1Table extends Migration
     {
         Schema::create('forms1', function (Blueprint $table) {
             $table->increments('id');
+
+            $table->integer('id_info')->unsigned();
+            $table->foreign('id_info')->references('id')->on('bases');
+            
+
+            $table->string('Tema1');
+            $table->string('Tema2');
+            $table->string('Tema3');
+            $table->string('Tema4');
+            $table->string('Focus');
+            $table->string('Type');
+            $table->string('Agency');
+            $table->string('Open_access');
+            $table->string('Parameters');
+            $table->string('Keyboard');
+            $table->string('Abstract');
             $table->timestamps();
         });
     }

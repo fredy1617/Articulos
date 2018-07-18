@@ -17,6 +17,35 @@
 	                    </small>
 	                @endif
 	        </div>
+	        <div class="form-group{{ $errors->has('Tema1','Tema2','Tema3','Tema4') ? ' has-error' : '' }}">
+			
+				{{Form::select('Tema1', [ 'MEXX' => 'MEXX', 'NREL' => 'NREL', 'Parameters'  => 'Parameters' , 'WLEC' => 'WLEC'], null, ['class' => 'btn btn-default dropdown-toggle', 'placeholder'=>'Tema1 '] )}}
+					@if ($errors->has('Tema1'))
+	                    <small class="text-danger">
+		                    <strong>{{ $errors->first('Tema1') }}</strong>
+	                    </small>
+	                @endif
+
+				{{Form::select('Tema2', [ 'MEXX' => 'MEXX', 'NREL' => 'NREL', 'Parameters'  => 'Parameters' , 'WLEC' => 'WLEC'], null, ['class' => 'btn btn-default dropdown-toggle', 'placeholder'=>'Tema2 '] )}}
+					@if ($errors->has('Tema2'))
+	                    <small class="text-danger">
+		                    <strong>{{ $errors->first('Tema2') }}</strong>
+	                    </small>
+	                @endif
+
+	            {{Form::select('Tema3', [ 'MEXX' => 'MEXX', 'NREL' => 'NREL', 'Parameters'  => 'Parameters' , 'WLEC' => 'WLEC'], null, ['class' => 'btn btn-default dropdown-toggle', 'placeholder'=>'Tema3 '] )}}
+					@if ($errors->has('Tema3'))
+	                    <small class="text-danger">
+		                    <strong>{{ $errors->first('Tema3') }}</strong>
+	                    </small>
+	                @endif
+	            {{Form::select('Tema4', [ 'MEXX' => 'MEXX', 'NREL' => 'NREL', 'Parameters'  => 'Parameters' , 'WLEC' => 'WLEC'], null, ['class' => 'btn btn-default dropdown-toggle', 'placeholder'=>'Tema4 '] )}}
+					@if ($errors->has('Tema4'))
+	                    <small class="text-danger">
+		                    <strong>{{ $errors->first('Tema4') }}</strong>
+	                    </small>
+	                @endif
+	        </div>
 			<div class="form-group{{ $errors->has('Country') ? ' has-error' : '' }}">
 	            {{Form::text('Country', $form4->Country, ['class'=>'form-control', 'placeholder'=>'Country'])}}
 	                @if ($errors->has('Country'))

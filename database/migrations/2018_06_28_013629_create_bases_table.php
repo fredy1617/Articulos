@@ -17,7 +17,7 @@ class CreateBasesTable extends Migration
             $table->increments('id');
             $table->string('titulo');
 
-            $table->integer('año');
+            $table->integer('year');
 
             $table->integer('id_revista')->unsigned();
             $table->foreign('id_revista')->references('id')->on('revistas');
