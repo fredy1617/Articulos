@@ -20,7 +20,7 @@ class BaseController extends Controller
         $query=trim($request->get('searchText'));
         $base =DB::table('bases')->where('titulo','LIKE','%'.$query.'%')
         ->orderBy('id','desc')
-        ->paginate(10);
+        ->paginate(8);
 
         
         return view('base.index', ["base" => $base, "searchText"=>$query]);

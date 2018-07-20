@@ -7,14 +7,16 @@
 @section('content')
 
 <div class="big-padding text-center blue-grey white-text">
-	<h1>Articulos</h1>
+	
+	<font color="#eeeeee"><h8  >-</h8></font>
 </div>
 
 <div class="row text-center" align="text-center">
-	<font color="#eeeeee"><h8>_____________</h8></font>
-	<h1>Articulos</h1>
-	<font color="#eeeeee"><h8  >_____________</h8></font>
+	<font color="#eeeeee"><h8>_____</h8></font>
+	<h2>Articulos</h2>
+	<font color="#eeeeee"><h1>___</h1></font>
 	<a  href="/infobase/create'" ><button class="btn btn-outline-success">Registrar</button> </a>
+	<font color="#eeeeee"><h1>____________________________</h1></font>
 	<span>
 	@include('base.search')
 	</span>
@@ -44,9 +46,10 @@
 			@endforeach
 		</tbody>
 	</table>
-	<div class="row">{{$base->render()}}</div>
 	
 </div>
+
+<div class="row">{{$base->render()}}</div>
 
 
 
