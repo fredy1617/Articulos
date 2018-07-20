@@ -9,7 +9,16 @@
 <div class="big-padding text-center blue-grey white-text">
 	<h1>Articulos</h1>
 </div>
-<a class="btn btn-outline-success" href="{{url('/infobase/create')}}" role="button">Registrar</a>
+
+<div class="row text-center" align="text-center">
+	<font color="#eeeeee"><h8>_____________</h8></font>
+	<h1>Articulos</h1>
+	<font color="#eeeeee"><h8  >_____________</h8></font>
+	<a  href="/infobase/create'" ><button class="btn btn-outline-success">Registrar</button> </a>
+	<span>
+	@include('base.search')
+	</span>
+</div>
 <div class="container">
 	<table class="table table-striped">
 		<thead>
@@ -35,7 +44,10 @@
 			@endforeach
 		</tbody>
 	</table>
+	<div class="row">{{$base->render()}}</div>
+	
 </div>
+
 
 
 @endsection

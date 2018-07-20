@@ -6,10 +6,19 @@
   </button>
 
   <div class="collapse navbar-collapse" id="navbarSupportedContent" >
-
+    <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+            <a class="nav-link" ><br><span class="sr-only">(current)</span></a>
+        </li>
+    </ul>
     <ul class="navbar-nav mr-auto">
         <li class="nav-item active">
             <a class="nav-link" href="{{ url('/inicio') }}">Revistas<span class="sr-only">(current)</span></a>
+        </li>   
+    </ul>
+    <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+            <a class="nav-link" href="{{ url('/autor') }}">Autores<span class="sr-only">(current)</span></a>
         </li>   
     </ul>
     <ul class="navbar-nav mr-auto">
@@ -27,10 +36,42 @@
             <a class="nav-link" ><br><span class="sr-only">(current)</span></a>
         </li>  
     </ul>
+    <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+            <a class="nav-link" ><br><span class="sr-only">(current)</span></a>
+        </li>
+    </ul>
+    </ul><ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+            <a class="nav-link" ><br><span class="sr-only">(current)</span></a>
+        </li>  
+    </ul>
+    <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+            <a class="nav-link" ><br><span class="sr-only">(current)</span></a>
+        </li>
+    </ul>
+    </ul><ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+            <a class="nav-link" ><br><span class="sr-only">(current)</span></a>
+        </li>  
+    </ul>
+    <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+            <a class="nav-link" ><br><span class="sr-only">(current)</span></a>
+        </li>
+    </ul>
+    </ul><ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+            <a class="nav-link" ><br><span class="sr-only">(current)</span></a>
+        </li>  
+    </ul>
 
     <ul class="navbar-nav mr-auto">
         @guest
             <li><a href="{{ route('login') }}">Login <br></a></li>
+
+            <li><a href="3"> - </a></li>
             <li><a href="{{ route('register') }}">Register</a></li>
         @else
     <li class="nav-item dropdown">

@@ -16,7 +16,10 @@ class AutorController extends Controller
      */
     public function index()
     {
-        //
+        $autor = Autor::all();
+
+        
+        return view('autor.index', ["autor" => $autor]);
     }
 
     /**
@@ -26,10 +29,7 @@ class AutorController extends Controller
      */
     public function create()
     {
-        $autor = new Autor;
-        $bases=Base::orderBy('titulo', 'ASC')->pluck('titulo', 'id');
-        
-        return view("autor.create", ["autor" => $autor])->with('bases', $bases);
+        //
     }
 
     /**
@@ -40,31 +40,7 @@ class AutorController extends Controller
      */
     public function store(Request $request)
     {
-        $autor = new Autor;
-        $autor->id_info=$request->id_info;
-        $autor->autor1=$request->autor1;
-        
-        if ($request->autor2==null or $request->autor3==null or $request->autor4==null or $request->autor5==null) {
-
-            $request->autor2=" ";
-            $request->autor3=" ";
-            $request->autor4=" ";
-            $request->autor5=" ";
-        }
-        
-        $autor->autor2=$request->autor2;
-        $autor->autor3=$request->autor3;
-        $autor->autor4=$request->autor4;
-        $autor->autor5=$request->autor5;
-        /*$categoria->user_id= Auth::user()->id;*/
-        
-        $autor->save();
-
-        if($autor->save()){
-            return redirect("/autor");
-        }else{
-            return view("autor.create");
-        }
+       //
     }
 
     /**

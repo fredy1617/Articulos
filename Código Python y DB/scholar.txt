@@ -1,0 +1,55 @@
+@article{0587,
+  title={A multi-region load dispatch model for the long-term optimum planning of China’s electricity sector},
+  author={Guo, Zheng and Cheng, Rui and Xu, Zhaofeng and Liu, Pei and Wang, Zhe and Li, Zheng and Jones, Ian and Sun, Yong},
+  journal={Applied energy},
+  volume={185},
+  pages={556--572},
+  year={2017},
+  publisher={Elsevier}
+}
+@article{0585,
+  title={Generation Expansion Planning With Large Amounts of Wind Power via Decision-Dependent Stochastic Programming},
+  author={Zhan, Yiduo and Zheng, Qipeng P and Wang, Jianhui and Pinson, Pierre},
+  journal={IEEE Transactions on Power Systems},
+  volume={32},
+  number={4},
+  pages={3015--3026},
+  year={2017},
+  publisher={IEEE}
+}
+@article{0115,
+  title={Modelling of energy supply systems by the Balmorel model},
+  author={Gatautis, Ramunas and Ravn, Hans F},
+  year={2005},
+  publisher={Begel House Inc.}
+}
+@article{0116,
+  title={Optimal configuration of an integrated power and transport system},
+  author={Juul, Nina and Meibom, Peter},
+  journal={Energy},
+  volume={36},
+  number={5},
+  pages={3523--3530},
+  year={2011},
+  publisher={Elsevier}
+}
+@article{0117,
+  title={Optimization of use of waste in the future energy system},
+  author={M{\"u}nster, Marie and Meibom, Peter},
+  journal={Energy},
+  volume={36},
+  number={3},
+  pages={1612--1622},
+  year={2011},
+  publisher={Elsevier}
+}
+@article{0043,
+  title={Multi-criteria assessment of new and renewable energy power plants},
+  author={Afgan, Naim H and Carvalho, Maria G},
+  journal={Energy},
+  volume={27},
+  number={8},
+  pages={739--755},
+  year={2002},
+  publisher={Elsevier}
+}

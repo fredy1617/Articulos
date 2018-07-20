@@ -76,21 +76,60 @@ def Todo():
                     if  Checar(registros['Title'])==True:
                         if askyesno('Verificar', 'El articulo: \n \n "'+registros['Title']+'" \n \n  Ya fue registrado ¿Desea GUARDARLO nuevamente?'):
                             print "Se INSERTA"
+                            #INICIAMOS CON LA INSERCION DE LOS REGISTROS*******
+                        
+                            #INSERCION A BASE-->
+                            print TableBase(registros)
+                            #INCERCION A AUTORES-->
+                            print TableAutores(registros['Authors'])
+                            #SE LIMPIA EL DICCIONARIO PARA OTRO REGISTRO
+                            registros={}
                         else:
                             print "No se INSERTA"
+                            registros={}
                     else:
                         #INICIAMOS CON LA INSERCION DE LOS REGISTROS*******
                         
                         #INSERCION A BASE-->
-                        #print TableBase(registros)
+                        print TableBase(registros)
                         #INCERCION A AUTORES-->
-                        #print TableAutores(registros['Authors'])
+                        print TableAutores(registros['Authors'])
                         #SE LIMPIA EL DICCIONARIO PARA OTRO REGISTRO
                         registros={}
 
         
 #-------------------------------------------------------------------------------------------                    
-def TableBase(values):   
+def TableBase(values): 
+    revista=values['Journal']
+    #----------------------------------------
+    aux=revista.split('\&')
+    cont=1
+    newRevista=''
+    for part in aux:
+        if cont>1:    
+            newRevista+='&'
+        newRevista+=part
+        cont+=1
+    #----------------------------------------
+    aux=newRevista.split('&')
+    cont=1
+    newRevista2=''
+    for part in aux:
+        if cont>1:    
+            newRevista2+='and'
+        newRevista2+=part
+        cont+=1
+    #-----------------------------------------  
+    aux=revista.split('and')
+    cont=1
+    newRevista3=''
+    for part in aux:
+        if cont>1:    
+            newRevista3+='&'
+        newRevista3+=part
+        cont+=1
+        
+    print newRevista,newRevista2,newRevista3
     lista_review=[]
     cursor.execute("SELECT nombre FROM revistas")
     
@@ -100,15 +139,25 @@ def TableBase(values):
     #CHECAMOS QUE LA REVISTA ESTE REGISTRADA PARA OBTENER EL ID        
     if values['Journal']=='':
         id_review='1'#cualquiera que tenga id 0 esta vacio
+        print 'VACIO'
         
-    elif values['Journal'].upper() in lista_review:
-        cursor.execute("SELECT id FROM revistas WHERE nombre='"+values['Journal']+"'")
+    elif newRevista.upper() in lista_review:
+        cursor.execute("SELECT id FROM revistas WHERE nombre='"+newRevista+"'")
+        id_review=str(list(cursor.fetchall())[0][0])
+        print 'Si esta en la revistas y este es su id:',id_review
+    elif newRevista2.upper() in lista_review:
+        cursor.execute("SELECT id FROM revistas WHERE nombre='"+newRevista2+"'")
+        id_review=str(list(cursor.fetchall())[0][0])
+        print 'Si esta en la revistas y este es su id:',id_review
+    elif newRevista3.upper() in lista_review:
+        cursor.execute("SELECT id FROM revistas WHERE nombre='"+newRevista3+"'")
         id_review=str(list(cursor.fetchall())[0][0])
         print 'Si esta en la revistas y este es su id:',id_review
         
     else:  
         id_review='2'#cualquiera que tenga id 1 tendra que checar el nombre de la revista   
-     
+        print 'NO ESTA'
+    
     #SENTENCIA PARA LA INCERCION     
     Base_Instert=("INSERT INTO `bases` (`titulo`, `year`, `id_revista`, `tipo`) VALUES ( '"+values['Title']+"', '"+values['Year']+"', '"+id_review+"', '"+values['Type']+"')")
     print Base_Instert
@@ -134,6 +183,14 @@ def TableAutores(autores):
         columnas+="`Nombre_"+str(cont)+"`,`Apellido_"+str(cont)+"`"
         values+="'"+separa[1]+"','"+separa[0]+"'"   
         
+    for x in range(cont+1, 6):
+        cont+=1
+        if cont>1:
+            columnas+=","
+            values+=","
+        columnas+="`Nombre_"+str(cont)+"`,`Apellido_"+str(cont)+"`"
+        values+="'-','-'"  
+        
      #SE OBTIENE EL ID DE BASE 
     cursor.execute("SELECT id FROM bases ORDER BY id DESC limit 1")
     id_base=str(list(cursor.fetchall())[0][0])
@@ -147,7 +204,7 @@ def TableAutores(autores):
     except:
         return "No se hizo la insercion Autores"    
         
-        
+    
 #-------------------------------------------------------------------------------------------    
 def Checar(nombre):
     lista_articulos=[]
@@ -165,7 +222,7 @@ def Checar(nombre):
 app = Tk()
 app.title("Past Continuous")
 #COLOR DE LA PORTADA
-Color="#006400"
+Color="#588782"
 #LETRA QUE USARA LA PORTADA
 Letras="Arial"
 app.config(bg=Color)
@@ -187,23 +244,25 @@ vp.config(bg=Color)
 #logoI = Label(vp, image=Logo_I)
 #logoI.grid(column = 1, row = 1)
 
-Titlulo = Label(vp, text = "Important !! ",bg=Color, font=(Letras,20,"bold"),fg="#8d0000")
+Titlulo = Label(vp, text = "¡ Important !  ",bg=Color, font=(Letras,24,"bold"),fg="#FFFFFF")
 Titlulo.grid(column = 2, row = 1)
 #____________________________________________________________________
 
 
 #_________PONEMOS UN TEXTO QUE SE MOSTRARA EN vp_____________________
-Enuncia = Label(vp, text = "1. El archivo se debe de llamar scholar.txt \n / The file should be called scholar.txt ",bg=Color,font=(Letras,14))
+Enuncia = Label(vp, text = "\n1. El archivo se deberá llamar scholar.txt \n / The file should be called scholar.txt ",bg=Color,font=(Letras,18))
 Enuncia.grid(column = 2, row = 2)
-Enuncia2 = Label(vp, text = "2. Estructura del archivo  / Structure of the file : ",bg=Color,font=(Letras,14))
+Enuncia2 = Label(vp, text = "2. Estructura del archivo  / Structure of the file : ",bg=Color,font=(Letras,18))
 Enuncia2.grid(column = 2, row = 3)
+Enuncia2 = Label(vp, text = "2.1 Tiene que estar entre llaves '{ }'  / It has to be between keys '{ }' \n 2.2 Finalizar cada articulo con llave '}' / Finish each item with a key '}'  \n \n Ejemplo/ Example: \n",bg=Color,font=(Letras,12))
+Enuncia2.grid(column = 2, row = 4)
 Enuncia3 = Label(vp, text = "@article{0117,                  \ntitle={title} ,          \n author={author},   \n journal={journal}, \n year={2011} ,      \n}                                    \n",bg=Color,font=(Letras,12))
-Enuncia3.grid(column = 2, row = 4)
+Enuncia3.grid(column = 2, row = 5)
 #____________________________________________________________________
 
 
 #____ES EL BOTON QUE ACTIVA LA FUNCION DE Todo_____________________
-boton=Button(vp, text = "Start", command =Todo,font=("Times",18,"bold"),activebackground="Red", activeforeground="White", borderwidth=4)
+boton=Button(vp, text = "Start", command =Todo,font=("Times",18,"bold"),bg=Color,activebackground="Red", activeforeground="White", borderwidth=4)
 boton.grid(column =2, row = 6)
 #____________________________________________________________________
 

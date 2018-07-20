@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Base;
 use App\Revista;
+use DB;
 
 class BaseController extends Controller
 {
@@ -14,16 +15,15 @@ class BaseController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        $base = Base::all();
+        $query=trim($request->get('searchText'));
+        $base =DB::table('bases')->where('titulo','LIKE','%'.$query.'%')
+        ->orderBy('id','desc')
+        ->paginate(10);
 
-        $base->each(function($base){
-            $base->revista;
-
-        });
         
-        return view('base.index', ["base" => $base]);
+        return view('base.index', ["base" => $base, "searchText"=>$query]);
     }
 
     /**
