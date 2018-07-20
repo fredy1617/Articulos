@@ -42,6 +42,11 @@ class Form4Controller extends Controller
         $form4 = new Form4;
         $form4->id_info=$request->id_info;
 
+        if ($request->Tema1==null  ) { $request->Tema1=''; }
+        if ($request->Tema2==null ) { $request->Tema2=''; }
+        if ($request->Tema3==null ) { $request->Tema3=''; }
+        if ($request->Tema4==null  ) { $request->Tema4=''; }
+
         $form4->Tema1=$request->Tema1;
         $form4->Tema2=$request->Tema2;
         $form4->Tema3=$request->Tema3;

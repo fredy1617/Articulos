@@ -43,6 +43,11 @@ class Form5Controller extends Controller
         $form5 = new Form5;
         $form5->id_info=$request->id_info;
 
+        if ($request->Tema1==null  ) { $request->Tema1=''; }
+        if ($request->Tema2==null ) { $request->Tema2=''; }
+        if ($request->Tema3==null ) { $request->Tema3=''; }
+        if ($request->Tema4==null  ) { $request->Tema4=''; }
+
         $form5->Tema1=$request->Tema1;
         $form5->Tema2=$request->Tema2;
         $form5->Tema3=$request->Tema3;

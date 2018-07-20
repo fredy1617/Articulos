@@ -99,7 +99,7 @@ def TableBase(values):
 
     #CHECAMOS QUE LA REVISTA ESTE REGISTRADA PARA OBTENER EL ID        
     if values['Journal']=='':
-        id_review='0'#cualquiera que tenga id 0 esta vacio
+        id_review='1'#cualquiera que tenga id 0 esta vacio
         
     elif values['Journal'].upper() in lista_review:
         cursor.execute("SELECT id FROM revistas WHERE nombre='"+values['Journal']+"'")
@@ -107,7 +107,7 @@ def TableBase(values):
         print 'Si esta en la revistas y este es su id:',id_review
         
     else:  
-        id_review='1'#cualquiera que tenga id 1 tendra que checar el nombre de la revista   
+        id_review='2'#cualquiera que tenga id 1 tendra que checar el nombre de la revista   
      
     #SENTENCIA PARA LA INCERCION     
     Base_Instert=("INSERT INTO `bases` (`titulo`, `year`, `id_revista`, `tipo`) VALUES ( '"+values['Title']+"', '"+values['Year']+"', '"+id_review+"', '"+values['Type']+"')")

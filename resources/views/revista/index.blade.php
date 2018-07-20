@@ -15,7 +15,6 @@
 			<tr>
 				<td>ID</td>
 				<td>Nombre</td>
-				<td></td>
 			</tr>
 		</thead>
 		<tbody>
@@ -23,9 +22,6 @@
 			<tr>
 				<td>{{ $bases->id}}</td>
 				<td>{{ $bases->nombre}}</td>
-				<td>
-					<a type="button" class="btn btn-outline-info" href="{{url('#')}}">Mas</a>
-				</td>
 			</tr>
 			@endforeach
 		</tbody>

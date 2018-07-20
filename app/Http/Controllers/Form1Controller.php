@@ -44,10 +44,16 @@ class Form1Controller extends Controller
         $form1 = new Form1;
         $form1->id_info=$request->id_info;
 
+        if ($request->Tema1==null  ) { $request->Tema1=''; }
+        if ($request->Tema2==null ) { $request->Tema2=''; }
+        if ($request->Tema3==null ) { $request->Tema3=''; }
+        if ($request->Tema4==null  ) { $request->Tema4=''; }
+
         $form1->Tema1=$request->Tema1;
         $form1->Tema2=$request->Tema2;
         $form1->Tema3=$request->Tema3;
         $form1->Tema4=$request->Tema4;
+        
         $form1->Focus=$request->Focus;
         $form1->Type=$request->Type;
         $form1->Agency=$request->Agency;
