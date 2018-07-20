@@ -15,8 +15,8 @@
 	<font color="#eeeeee"><h8>_____</h8></font>
 	<h2>Articulos</h2>
 	<font color="#eeeeee"><h1>___</h1></font>
-	<a  href="/infobase/create'" ><button class="btn btn-outline-success">Registrar</button> </a>
-	<font color="#eeeeee"><h1>____________________________</h1></font>
+	<a  href="/Articulos/public/infobase/create" ><button class="btn btn-outline-success">Registrar</button> </a>
+	<font color="#eeeee"><h1>____________________________</h1></font>
 	<span>
 	@include('base.search')
 	</span>
