@@ -64,7 +64,7 @@ class Form1Controller extends Controller
         $form1->save();
 
         if($form1->save()){
-            return redirect("/form1");
+            return redirect("/infobase");
         }else{
             return view("form1.create");
         }

@@ -69,9 +69,9 @@ class Form3Controller extends Controller
         $form3->save();
 
         if($form3->save()){
-            return redirect("/form3");
+            return redirect("/infobase");
         }else{
-            return view("form3.create");
+            return view("Form3.create");
         }
     }
 

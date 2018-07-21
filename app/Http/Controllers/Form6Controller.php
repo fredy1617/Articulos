@@ -57,7 +57,7 @@ class Form6Controller extends Controller
         $form6->save();
 
         if($form6->save()){
-            return redirect("/form6");
+            return redirect("/infobase");
         }else{
             return view("form6.create");
         }

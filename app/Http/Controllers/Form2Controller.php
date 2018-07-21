@@ -132,6 +132,7 @@ class Form2Controller extends Controller
         if ($request->Construction_time==null ) { $request->Construction_time=0; }
         if ($request->Maintenance==null ) { $request->Maintenance=0; }
         if ($request->Lifetime==null) { $request->Lifetime=0; }
+        if ($request->Unistalled==null) { $request->Unistalled=0; }
         if ($request->Upgraded==null) { $request->Upgraded=0; }
         if ($request->CCS_constraints==null) { $request->CCS_constraints=0; }
         if ($request->Transmission_capacity==null) { $request->Transmission_capacity=0; }
@@ -172,6 +173,7 @@ class Form2Controller extends Controller
         $form2->Construction_time=$request->Construction_time;
         $form2->Maintenance=$request->Maintenance;
         $form2->Lifetime=$request->Lifetime;
+        $form2->Unistalled=$request->Unistalled;
         $form2->Upgraded=$request->Upgraded;
         $form2->CCS_constraints=$request->CCS_constraints;
         $form2->Transmission_capacity=$request->Transmission_capacity;
@@ -196,12 +198,16 @@ class Form2Controller extends Controller
         $form2->Emissions_markets=$request->Emissions_markets;
         $form2->Penetration_Potential=$request->Penetration_Potential;
         $form2->Max_RES_penetration=$request->Max_RES_penetration;
+        $form2->Min_RES_contribution=$request->Min_RES_contribution;
         $form2->RES_target=$request->RES_target;
         $form2->RPS=$request->RPS;
         $form2->Heat_consumption=$request->Heat_consumption;
         $form2->Unit_clustering=$request->Unit_clustering;
         $form2->Interconexion=$request->Interconexion;
         $form2->DSM_projects=$request->DSM_projects;
+        
+        $form2->Keyboard=$request->Keyboard;
+        $form2->Abstract=$request->Abstract;
 
 
 
@@ -209,7 +215,7 @@ class Form2Controller extends Controller
         $form2->save();
 
         if($form2->save()){
-            return redirect("/form2");
+            return redirect("/infobase");
         }else{
             return view("form2.create");
         }

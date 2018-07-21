@@ -7,10 +7,10 @@
 	<div class="container white">
 		<h1>Completar Formulario(Energy Sourse)</h1>
 		<!--formulario-->
-		{!! Form::open(['url'=> '/form3/'.$form3->id, 'method'=>'POST']) !!}
+		{!! Form::open(['url'=> '/Form3/'.$form3->id, 'method'=>'POST']) !!}
 		<div class="form-group">
 			 <div class="form-group{{ $errors->has('id_info') ? ' has-error' : '' }}">
-				{{Form::select('id_info', $bases, null, ['class'=>'form-control', 'placeholder'=>'Titulo '] )}}
+				{{Form::select('id_info', $bases, null, ['class'=>'form-control', 'placeholder'=>'Selecciona el titulo de tu articulo  '] )}}
 					@if ($errors->has('id_info'))
 	                    <small class="text-danger">
 		                    <strong>{{ $errors->first('id_info') }}</strong>
@@ -123,7 +123,7 @@
 			
 		</div>
 		<div class="form-group text-right">
-			<a href="{{url('/infobase/'.$form3->id_info.'/edit')}}">Regresar al listado de Articulos</a>
+			<a href="{{url('/infobase/')}}">Regresar al listado de Articulos</a>
 			<input type="submit"  value="Enviar" class="btn btn-success">
 		</div>
 			{!! Form::close() !!}
