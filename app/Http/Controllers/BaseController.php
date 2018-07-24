@@ -49,6 +49,7 @@ class BaseController extends Controller
     {
         $base = new Base;
         
+        $base->id_Art=$request->id_Art;
         $base->titulo=$request->titulo;
         $base->year=$request->year;
         $base->id_revista=$request->id_revista;

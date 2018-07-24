@@ -25,6 +25,7 @@
 	<table class="table table-striped">
 		<thead>
 			<tr>
+				<td>Id</td>
 				<td>Titulo</td>
 				<td>Año</td>
 				<td>Revista</td>
@@ -34,7 +35,8 @@
 		</thead>
 		<tbody>
 			@foreach ($base as $bases)
-			<tr>
+			<tr> 
+				<td>{{ $bases->id_Art}}</td>
 				<td>{{ $bases->titulo}}</td>
 				<td>{{ $bases->year}}</td>
 				<td>{{ $bases->id_revista}}</td>

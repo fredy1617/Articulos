@@ -54,6 +54,9 @@ class Form6Controller extends Controller
         $form6->Tema4=$request->Tema4;
 
         $form6->Algorithms_Tecnologies=$request->Algorithms_Tecnologies;
+        $form6->Keyboard=$request->Keyboard;
+        $form6->Abstract=$request->Abstract;
+
         $form6->save();
 
         if($form6->save()){

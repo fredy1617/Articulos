@@ -17,6 +17,22 @@
 	                    </small>
 	                @endif
 	        </div>
+	        <div class="form-group{{ $errors->has('Keyboard') ? ' has-error' : '' }}">
+	            {{Form::text('Keyboard', $form2->Keyboard, ['class'=>'form-control', 'placeholder'=>'Keyboard '])}}
+	                @if ($errors->has('Keyboard'))
+	                    <small class="text-danger">
+		                    <strong>{{ $errors->first('Keyboard') }}</strong>
+	                    </small>
+	                @endif
+        	</div>
+        	<div class="form-group{{ $errors->has('Abstract') ? ' has-error' : '' }}">
+	            {{Form::text('Abstract', $form2->Abstract, ['class'=>'form-control', 'placeholder'=>'Abstract'])}}
+	                @if ($errors->has('Abstract'))
+	                    <small class="text-danger">
+		                    <strong>{{ $errors->first('Abstract') }}</strong>
+	                    </small>
+	                @endif
+        	</div>
 	        <div class="form-group{{ $errors->has('Tema1','Tema2','Tema3','Tema4') ? ' has-error' : '' }}">
 			
 				{{Form::select('Tema1', [ 'DSO' => 'DSO', 'EneSou' => 'EneSou', 'EneSys' => 'EneSys', 'ESS' => 'ESS', 'GEP'  => 'GEP', 'Other' => 'Other' , 'Power Dispatch'  => 'Power Dispatch' , 'Power Flow'  => 'Power Flow', 'Escenarios analysis' => 'Escenarios analysis' , 'TEP' => 'TEP'], null, ['class' => 'btn btn-default dropdown-toggle', 'placeholder'=>'Tema1 '] )}}
@@ -678,24 +694,7 @@
 		                    <strong>{{ $errors->first('DSM_projects') }}</strong>
 	                    </small>
 	                @endif
-	        </div>
-        	<div class="form-group{{ $errors->has('Keyboard') ? ' has-error' : '' }}">
-	            {{Form::text('Keyboard', $form2->Keyboard, ['class'=>'form-control', 'placeholder'=>'Keyboard '])}}
-	                @if ($errors->has('Keyboard'))
-	                    <small class="text-danger">
-		                    <strong>{{ $errors->first('Keyboard') }}</strong>
-	                    </small>
-	                @endif
-        	</div>
-        	<div class="form-group{{ $errors->has('Abstract') ? ' has-error' : '' }}">
-	            {{Form::text('Abstract', $form2->Abstract, ['class'=>'form-control', 'placeholder'=>'Abstract'])}}
-	                @if ($errors->has('Abstract'))
-	                    <small class="text-danger">
-		                    <strong>{{ $errors->first('Abstract') }}</strong>
-	                    </small>
-	                @endif
-        	</div>
-			
+	        </div>        	
 		</div>
 		<div class="form-group text-right">
 			<a href="{{url('/infobase/')}}">Regresar al listado de Articulos</a>

@@ -25,6 +25,8 @@ class CreateForms6Table extends Migration
             $table->string('Tema4');
             
             $table->string('Algorithms_Tecnologies');
+            $table->string('Keyboard');
+            $table->string('Abstract');
             
             $table->timestamps();
         });

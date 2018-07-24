@@ -17,6 +17,22 @@
 	                    </small>
 	                @endif
 	        </div>
+	        <div class="form-group{{ $errors->has('Keyboard') ? ' has-error' : '' }}">
+	            {{Form::text('Keyboard', $form5->Keyboard, ['class'=>'form-control', 'placeholder'=>'Keyboard '])}}
+	                @if ($errors->has('Keyboard'))
+	                    <small class="text-danger">
+		                    <strong>{{ $errors->first('Keyboard') }}</strong>
+	                    </small>
+	                @endif
+        	</div>
+        	<div class="form-group{{ $errors->has('Abstract') ? ' has-error' : '' }}">
+	            {{Form::text('Abstract', $form5->Abstract, ['class'=>'form-control', 'placeholder'=>'Abstract'])}}
+	                @if ($errors->has('Abstract'))
+	                    <small class="text-danger">
+		                    <strong>{{ $errors->first('Abstract') }}</strong>
+	                    </small>
+	                @endif
+        	</div>
 			<div class="form-group{{ $errors->has('Tema1','Tema2','Tema3','Tema4') ? ' has-error' : '' }}">
 			
 				{{Form::select('Tema1', [ 'Demand Forecast' => 'Demand Forecast', 'EneSys' => 'EneSys', 'ESS' => 'ESS', 'GEP' => 'GEP', 'Indicators' => 'Indicators',  'Market' => 'Market', 'Other' => 'Other', 'Policies' => 'Policies', 'RenEne' => 'RenEne', 'TEP'=> 'TEP', 'Tools' => 'Tools'], null, ['class' => 'btn btn-default dropdown-toggle', 'placeholder'=>'Tema1 '] )}}
@@ -79,25 +95,6 @@
 	                @endif
         	</div>
         	
-        	<div class="form-group{{ $errors->has('Keyboard') ? ' has-error' : '' }}">
-	            {{Form::text('Keyboard', $form5->Keyboard, ['class'=>'form-control', 'placeholder'=>'Keyboard '])}}
-	                @if ($errors->has('Keyboard'))
-	                    <small class="text-danger">
-		                    <strong>{{ $errors->first('Keyboard') }}</strong>
-	                    </small>
-	                @endif
-        	</div>
-        	<div class="form-group{{ $errors->has('Abstract') ? ' has-error' : '' }}">
-	            {{Form::text('Abstract', $form5->Abstract, ['class'=>'form-control', 'placeholder'=>'Abstract'])}}
-	                @if ($errors->has('Abstract'))
-	                    <small class="text-danger">
-		                    <strong>{{ $errors->first('Abstract') }}</strong>
-	                    </small>
-	                @endif
-        	</div>
-
-
-			
 		</div>
 		<div class="form-group text-right">
 			<a href="{{url('/infobase/')}}">Regresar al listado de Articulos</a>

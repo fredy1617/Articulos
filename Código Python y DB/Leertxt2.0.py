@@ -33,31 +33,47 @@ def Todo():
         #INICIAMOS A RECORRER EL TXT Y SEPARAR VALORES    
         for line in file: 
             line.strip()
+            if '@' in line:
+                ide=line.split('{')
+                ide=ide[1].split()
+                id_art=ide[0][0:4]
+                #print id_art
+                registros['ID']=id_art
             line = line.split ('=')
             line[0]=line[0].split()
             #print line[0]
             if line==[[]]:
                 line[0]=''
             elif line[0]==['title']:
-                title=line[1][1:-3]
+                x=(line[1].find('{'))+1
+                y=line[1].find('}')
+                title=line[1][x:y]
                 #print 'var Title:', title
                 registros['Title']=title
             elif line[0]==['author']:
-                author=line[1][1:-3]
+                x=(line[1].find('{'))+1
+                y=line[1].find('}')
+                author=line[1][x:y]
                 lista_autores=author.split('and')
                 #print 'var Author:',lista_autores
                 registros['Authors']=lista_autores
             elif line[0]==['year']:
-                year=line[1][1:-3]
-                #print 'var Year:', year
+                x=(line[1].find('{'))+1
+                y=line[1].find('}')
+                year=line[1][x:y]
+               # print 'var Year:', year
                 registros['Year']=year
             elif line[0]==['journal']:
-                journal=line[1][1:-3]
-                #print 'var Journal:', journal
+                y=line[1].find('}')
+                x=(line[1].find('{'))+1
+                journal=line[1][x:y]
+               # print 'var Journal:', journal
                 registros['Journal']=journal
-            elif line[0]==['type']:
-                Type=line[1][1:-3]
-                #print 'var Journal:', journal
+            elif line[0]==['type']:                
+                x=(line[1].find('{'))+1
+                y=line[1].find('}')
+                Type=line[1][x:y]
+                #print 'var Type:', Type
                 registros['Type']=Type
             elif line[0]==['}']:
                     cont+=1
@@ -74,18 +90,18 @@ def Todo():
                     
                     #VERIFICAMOS QUE NO SE REPITAN LOS ARTICULOS
                     if  Checar(registros['Title'])==True:
-                        if askyesno('Verificar', 'El articulo: \n \n "'+registros['Title']+'" \n \n  Ya fue registrado ¿Desea GUARDARLO nuevamente?'):
+                        if askyesno('Verificar', 'El articulo:    ID  '+registros['ID']+'\n \n "'+registros['Title']+'" \n \n  Ya fue registrado ¿Desea GUARDARLO nuevamente?'):
                             print "Se INSERTA"
                             #INICIAMOS CON LA INSERCION DE LOS REGISTROS*******
                         
                             #INSERCION A BASE-->
                             print TableBase(registros)
                             #INCERCION A AUTORES-->
-                            print TableAutores(registros['Authors'])
+                           # print TableAutores(registros['Authors'])
                             #SE LIMPIA EL DICCIONARIO PARA OTRO REGISTRO
                             registros={}
                         else:
-                            print "No se INSERTA"
+                           # print "No se INSERTA"
                             registros={}
                     else:
                         #INICIAMOS CON LA INSERCION DE LOS REGISTROS*******
@@ -93,7 +109,7 @@ def Todo():
                         #INSERCION A BASE-->
                         print TableBase(registros)
                         #INCERCION A AUTORES-->
-                        print TableAutores(registros['Authors'])
+                       # print TableAutores(registros['Authors'])
                         #SE LIMPIA EL DICCIONARIO PARA OTRO REGISTRO
                         registros={}
 
@@ -129,7 +145,6 @@ def TableBase(values):
         newRevista3+=part
         cont+=1
         
-    print newRevista,newRevista2,newRevista3
     lista_review=[]
     cursor.execute("SELECT nombre FROM revistas")
     
@@ -139,34 +154,35 @@ def TableBase(values):
     #CHECAMOS QUE LA REVISTA ESTE REGISTRADA PARA OBTENER EL ID        
     if values['Journal']=='':
         id_review='1'#cualquiera que tenga id 0 esta vacio
-        print 'VACIO'
+        #print 'VACIO'
         
     elif newRevista.upper() in lista_review:
         cursor.execute("SELECT id FROM revistas WHERE nombre='"+newRevista+"'")
         id_review=str(list(cursor.fetchall())[0][0])
-        print 'Si esta en la revistas y este es su id:',id_review
+        #print 'Si esta en la revistas y este es su id:',id_review
     elif newRevista2.upper() in lista_review:
         cursor.execute("SELECT id FROM revistas WHERE nombre='"+newRevista2+"'")
         id_review=str(list(cursor.fetchall())[0][0])
-        print 'Si esta en la revistas y este es su id:',id_review
+        #print 'Si esta en la revistas y este es su id:',id_review
     elif newRevista3.upper() in lista_review:
         cursor.execute("SELECT id FROM revistas WHERE nombre='"+newRevista3+"'")
         id_review=str(list(cursor.fetchall())[0][0])
-        print 'Si esta en la revistas y este es su id:',id_review
+        #print 'Si esta en la revistas y este es su id:',id_review
         
     else:  
         id_review='2'#cualquiera que tenga id 1 tendra que checar el nombre de la revista   
-        print 'NO ESTA'
+        #print 'NO ESTA'
     
     #SENTENCIA PARA LA INCERCION     
-    Base_Instert=("INSERT INTO `bases` (`titulo`, `year`, `id_revista`, `tipo`) VALUES ( '"+values['Title']+"', '"+values['Year']+"', '"+id_review+"', '"+values['Type']+"')")
+    Base_Instert=("INSERT INTO `bases` (`id_Art`,`titulo`, `year`, `id_revista`, `tipo`) VALUES ( '"+values['ID']+"', '"+values['Title']+"', '"+values['Year']+"', '"+id_review+"', '"+values['Type']+"')")
     print Base_Instert
     try:
         cursor.execute(Base_Instert)
         db.commit()
-        return "Se realizo la insercion"
+        return "---> 'SE INSERTO CORRECTAMENTE EL ARTICULO: "+values['ID']+" '<---"
     except:
-        return "No se hizo la insercion"
+        return "---> ''NO!' FUE INSERTO EL ARTICULO: "+values['ID']+" '<---"
+
         
 #-------------------------------------------------------------------------------------------    
 def TableAutores(autores):
@@ -200,9 +216,9 @@ def TableAutores(autores):
     try:
         cursor.execute(instert)
         db.commit()
-        return "Auntores Guardados"
+        return "---> 'LOS AUTORES DEL ARTICULO: "+values['ID']+" FUERON INSERTADOS'<---"
     except:
-        return "No se hizo la insercion Autores"    
+        return "---> 'LOS AUTORES DEL ARTICULO: "+values['ID']+" 'NO!' FUERON INSERTADOS'<---"   
         
     
 #-------------------------------------------------------------------------------------------    
@@ -214,9 +230,7 @@ def Checar(nombre):
         lista_articulos.append((list(N))[0].upper())
         
     if nombre.upper() in lista_articulos:
-        return True
-        
-        
+        return True   
         
 #____CREAMOS NUESTRO TKINTER EN app__________________________________        
 app = Tk()
@@ -230,7 +244,6 @@ app.config(bg=Color)
 
 #________Insertamos las imagenes a utilizar__________________________
 #Logo_I = PhotoImage(file="img/ingles.gif")
-
 #____________________________________________________________________
 
 #ventana Principal
@@ -248,7 +261,6 @@ Titlulo = Label(vp, text = "¡ Important !  ",bg=Color, font=(Letras,24,"bold"),
 Titlulo.grid(column = 2, row = 1)
 #____________________________________________________________________
 
-
 #_________PONEMOS UN TEXTO QUE SE MOSTRARA EN vp_____________________
 Enuncia = Label(vp, text = "\n1. El archivo se deberá llamar scholar.txt \n / The file should be called scholar.txt ",bg=Color,font=(Letras,18))
 Enuncia.grid(column = 2, row = 2)
@@ -265,15 +277,12 @@ Enuncia3.grid(column = 2, row = 5)
 boton=Button(vp, text = "Start", command =Todo,font=("Times",18,"bold"),bg=Color,activebackground="Red", activeforeground="White", borderwidth=4)
 boton.grid(column =2, row = 6)
 #____________________________________________________________________
-
 paso = Label(vp, text = "\n",bg=Color)
 paso.grid(column = 2, row = 8)
-
 
 #______AQUI TERMINA Y CREAMOS COMO PRINCIPAL NUESTRA VENTANA_________
 app.mainloop()
 #____________________________________________________________________
-
 
 #______AQUI TERMINA Y CERRAMOS LA CONECCION A LA DB_________________
 db.close()

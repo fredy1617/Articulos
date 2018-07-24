@@ -17,6 +17,22 @@
 	                    </small>
 	                @endif
 	        </div>
+	        <div class="form-group{{ $errors->has('Keyboard') ? ' has-error' : '' }}">
+	            {{Form::text('Keyboard', $form3->Keyboard, ['class'=>'form-control', 'placeholder'=>'Keyboard '])}}
+	                @if ($errors->has('Keyboard'))
+	                    <small class="text-danger">
+		                    <strong>{{ $errors->first('Keyboard') }}</strong>
+	                    </small>
+	                @endif
+        	</div>
+        	<div class="form-group{{ $errors->has('Abstract') ? ' has-error' : '' }}">
+	            {{Form::text('Abstract', $form3->Abstract, ['class'=>'form-control', 'placeholder'=>'Abstract'])}}
+	                @if ($errors->has('Abstract'))
+	                    <small class="text-danger">
+		                    <strong>{{ $errors->first('Abstract') }}</strong>
+	                    </small>
+	                @endif
+        	</div>	
 	        <div class="form-group{{ $errors->has('Tema1','Tema2','Tema3','Tema4') ? ' has-error' : '' }}">
 			
 				{{Form::select('Tema1', ['Biomass' => 'Biomass', 'Create BBDD' => 'Create BBDD', 'Economic' => 'Economic', 'Employment' => 'Employment', 'Input' => 'Input', 'Nuclear' => 'Nuclear', 'Parameters' => 'Parameters', 'Photovoltaic' => 'Photovoltaic', 'Waste' => 'Waste', 'Water use' => 'Water use', 'Wind' =>  'Wind', 'Wind/Mexico' => 'Wind/Mexico', 'Wind/PV/CSP' => 'Wind/PV/CSP', 'Employment' => 'Employment', 'WindEmployment' => 'WindEmployment'], null, ['class' => 'btn btn-default dropdown-toggle', 'placeholder'=>'Tema1 '] )}}
@@ -102,25 +118,7 @@
 	                    </small>
 	                @endif
         	</div>
-        	<div class="form-group{{ $errors->has('Keyboard') ? ' has-error' : '' }}">
-	            {{Form::text('Keyboard', $form3->Keyboard, ['class'=>'form-control', 'placeholder'=>'Keyboard '])}}
-	                @if ($errors->has('Keyboard'))
-	                    <small class="text-danger">
-		                    <strong>{{ $errors->first('Keyboard') }}</strong>
-	                    </small>
-	                @endif
-        	</div>
-        	<div class="form-group{{ $errors->has('Abstract') ? ' has-error' : '' }}">
-	            {{Form::text('Abstract', $form3->Abstract, ['class'=>'form-control', 'placeholder'=>'Abstract'])}}
-	                @if ($errors->has('Abstract'))
-	                    <small class="text-danger">
-		                    <strong>{{ $errors->first('Abstract') }}</strong>
-	                    </small>
-	                @endif
-        	</div>
-
-
-			
+        			
 		</div>
 		<div class="form-group text-right">
 			<a href="{{url('/infobase/')}}">Regresar al listado de Articulos</a>

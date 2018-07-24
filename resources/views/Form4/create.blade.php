@@ -17,6 +17,22 @@
 	                    </small>
 	                @endif
 	        </div>
+	        <div class="form-group{{ $errors->has('Focus') ? ' has-error' : '' }}">
+	            {{Form::text('Focus', $form4->Focus, ['class'=>'form-control', 'placeholder'=>'Focus '])}}
+	                @if ($errors->has('Focus'))
+	                    <small class="text-danger">
+		                    <strong>{{ $errors->first('Focus') }}</strong>
+	                    </small>
+	                @endif
+        	</div>
+        	<div class="form-group{{ $errors->has('Agency') ? ' has-error' : '' }}">
+	            {{Form::text('Agency', $form4->Agency, ['class'=>'form-control', 'placeholder'=>'Agency '])}}
+	                @if ($errors->has('Agency'))
+	                    <small class="text-danger">
+		                    <strong>{{ $errors->first('Agency') }}</strong>
+	                    </small>
+	                @endif
+        	</div>
 	        <div class="form-group{{ $errors->has('Tema1','Tema2','Tema3','Tema4') ? ' has-error' : '' }}">
 			
 				{{Form::select('Tema1', [ 'MEXX' => 'MEXX', 'NREL' => 'NREL', 'Parameters'  => 'Parameters' , 'WLEC' => 'WLEC'], null, ['class' => 'btn btn-default dropdown-toggle', 'placeholder'=>'Tema1 '] )}}
@@ -54,23 +70,7 @@
 	                    </small>
 	                @endif
         	</div>
-        	<div class="form-group{{ $errors->has('Focus') ? ' has-error' : '' }}">
-	            {{Form::text('Focus', $form4->Focus, ['class'=>'form-control', 'placeholder'=>'Focus '])}}
-	                @if ($errors->has('Focus'))
-	                    <small class="text-danger">
-		                    <strong>{{ $errors->first('Focus') }}</strong>
-	                    </small>
-	                @endif
-        	</div>
-        	<div class="form-group{{ $errors->has('Agency') ? ' has-error' : '' }}">
-	            {{Form::text('Agency', $form4->Agency, ['class'=>'form-control', 'placeholder'=>'Agency '])}}
-	                @if ($errors->has('Agency'))
-	                    <small class="text-danger">
-		                    <strong>{{ $errors->first('Agency') }}</strong>
-	                    </small>
-	                @endif
-        	</div>
-     
+        	     
 		</div>
 		<div class="form-group text-right">
 			<a href="{{url('/infobase/')}}">Regresar al listado de Articulos</a>

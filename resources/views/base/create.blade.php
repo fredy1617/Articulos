@@ -9,6 +9,15 @@
 		<!--formulario-->
 			{!! Form::open(['url'=> '/infobase/'.$base->id, 'method'=>'POST']) !!}
 		<div class="form-group">
+			
+			<div class="form-group{{ $errors->has('id_Art') ? ' has-error' : '' }}">
+	            {{Form::text('id_Art', $base->id_Art, ['class'=>'form-control', 'placeholder'=>'Id del Articulo:'])}}
+	                @if ($errors->has('id_Art'))
+	                    <small class="text-danger">
+		                    <strong>{{ $errors->first('id_Art') }}</strong>
+	                    </small>
+	                @endif
+        	</div>
 			<div class="form-group{{ $errors->has('titulo') ? ' has-error' : '' }}">
 	            {{Form::text('titulo', $base->titulo, ['class'=>'form-control', 'placeholder'=>'Titulo:'])}}
 	                @if ($errors->has('titulo'))
