@@ -17,6 +17,22 @@
 	                    </small>
 	                @endif
 	        </div>
+	        <div class="form-group{{ $errors->has('Keyboard') ? ' has-error' : '' }}">
+	            {{Form::text('Keyboard', $form4->Keyboard, ['class'=>'form-control', 'placeholder'=>'Keyboard '])}}
+	                @if ($errors->has('Keyboard'))
+	                    <small class="text-danger">
+		                    <strong>{{ $errors->first('Keyboard') }}</strong>
+	                    </small>
+	                @endif
+        	</div>
+        	<div class="form-group{{ $errors->has('Abstract') ? ' has-error' : '' }}">
+	            {{Form::text('Abstract', $form4->Abstract, ['class'=>'form-control', 'placeholder'=>'Abstract'])}}
+	                @if ($errors->has('Abstract'))
+	                    <small class="text-danger">
+		                    <strong>{{ $errors->first('Abstract') }}</strong>
+	                    </small>
+	                @endif
+        	</div>	
 	        <div class="form-group{{ $errors->has('Focus') ? ' has-error' : '' }}">
 	            {{Form::text('Focus', $form4->Focus, ['class'=>'form-control', 'placeholder'=>'Focus '])}}
 	                @if ($errors->has('Focus'))

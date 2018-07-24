@@ -27,6 +27,8 @@ class CreateForms4Table extends Migration
             $table->string('Country');
             $table->string('Focus');
             $table->string('Agency');
+            $table->string('Keyboard');
+            $table->string('Abstract');
             $table->timestamps();
         });
     }

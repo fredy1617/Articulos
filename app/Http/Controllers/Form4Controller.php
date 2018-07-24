@@ -55,6 +55,8 @@ class Form4Controller extends Controller
         $form4->Country=$request->Country;
         $form4->Focus=$request->Focus;
         $form4->Agency=$request->Agency;
+        $form4->Keyboard=$request->Keyboard;
+        $form4->Abstract=$request->Abstract;
         
         $form4->save();
 
