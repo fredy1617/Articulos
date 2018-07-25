@@ -87,17 +87,17 @@ def Todo():
                         registros['Journal']=''
                     if not 'Type'in registros.keys():
                         registros['Type']='Pending'
-                    
+                    print registros
                     #VERIFICAMOS QUE NO SE REPITAN LOS ARTICULOS
                     if  Checar(registros['Title'])==True:
                         if askyesno('Verificar', 'El articulo:    ID  '+registros['ID']+'\n \n "'+registros['Title']+'" \n \n  Ya fue registrado ¿Desea GUARDARLO nuevamente?'):
-                            print "Se INSERTA"
+                            #print "Se INSERTA"
                             #INICIAMOS CON LA INSERCION DE LOS REGISTROS*******
                         
                             #INSERCION A BASE-->
                             print TableBase(registros)
                             #INCERCION A AUTORES-->
-                           # print TableAutores(registros['Authors'])
+                            print TableAutores(registros['Authors'])
                             #SE LIMPIA EL DICCIONARIO PARA OTRO REGISTRO
                             registros={}
                         else:
@@ -109,7 +109,7 @@ def Todo():
                         #INSERCION A BASE-->
                         print TableBase(registros)
                         #INCERCION A AUTORES-->
-                       # print TableAutores(registros['Authors'])
+                        print TableAutores(registros['Authors'])
                         #SE LIMPIA EL DICCIONARIO PARA OTRO REGISTRO
                         registros={}
 
@@ -216,9 +216,9 @@ def TableAutores(autores):
     try:
         cursor.execute(instert)
         db.commit()
-        return "---> 'LOS AUTORES DEL ARTICULO: "+values['ID']+" FUERON INSERTADOS'<---"
+        return "---> 'LOS AUTORES FUERON INSERTADOS'<---"
     except:
-        return "---> 'LOS AUTORES DEL ARTICULO: "+values['ID']+" 'NO!' FUERON INSERTADOS'<---"   
+        return "---> 'LOS AUTORES 'NO!' FUERON INSERTADOS'<---"   
         
     
 #-------------------------------------------------------------------------------------------    

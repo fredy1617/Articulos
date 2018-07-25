@@ -13,18 +13,20 @@
 	{!! Form::open(['url'=> '/infobase/'.$base->id, 'method'=>'PATCH']) !!}
 	<table class="table table-striped">
 		<thead>
-			<tr>
+			<tr> 
+				<td>Id</td>
 				<td>Titulo</td>
 				<td>Autores</td>
 				<td>Año</td>
 				<td>Revista</td>
 				<td>Tipo </td>
 				<td></td>
+				<td></td>
 			</tr>
 		</thead>
 		<tbody>
 			<tr>
-				
+				<td>{{ Form::label('', $base->id_Art) }}</td>
 				<td>{{ Form::label('', $base->titulo) }}</td>
 				<td>{{ Form::label('', $base->id) }}</td>
 				<td>{{ Form::label('', $base->year) }}</td>
@@ -36,7 +38,17 @@
 					<a type="button" class="btn btn-outline-info" href="{{url($ruta)}}">Completar</a>
 					
 				</td>
+				@else
+				@if ($form2->Uncertainty=="Stocastic")
+				<td>
+					<a type="button" class="btn btn-outline-info" href="{{url($ruta2)}}">Stocastic</a>
+					
+				</td>
 				@endif
+				@endelse
+
+				@endif
+				
 			</tr>
 	</table>
 

@@ -25,7 +25,9 @@ class CreateForms2Table extends Migration
             
             $table->string('Pais');
             $table->string('Converge');
-            $table->string('Time');
+            $table->string('Planning_Horizon');
+            $table->string('Time_Perception');
+            $table->string('Balance_Time');
             $table->string('MILP_MINLP');
             $table->string('DP');
             $table->string('Bi_Level');

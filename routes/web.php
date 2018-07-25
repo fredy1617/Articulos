@@ -25,6 +25,7 @@ Route::resource('Form3', 'Form3Controller');
 Route::resource('Form4', 'Form4Controller');
 Route::resource('Form5', 'Form5Controller');
 Route::resource('Form6', 'Form6Controller');
+Route::resource('Form7', 'Form7Controller');
 Route::resource('app', 'AppController');
 
 Route::get('/getImport','ExcelController@getImport');

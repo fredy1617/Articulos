@@ -57,7 +57,9 @@ class Form2Controller extends Controller
 
         $form2->Pais=$request->Pais;
         $form2->Converge=$request->Converge;
-        $form2->Time=$request->Time;
+        $form2->Planning_Horizon=$request->Planning_Horizon;
+        $form2->Time_Perception=$request->Time_Perception;
+        $form2->Balance_Time=$request->Balance_Time;
         $form2->MILP_MINLP=$request->MILP_MINLP;
      
         if ($request->DP==null  ) { $request->DP=0; }
@@ -215,7 +217,7 @@ class Form2Controller extends Controller
         $form2->save();
 
         if($form2->save()){
-            return redirect("/infobase");
+            return redirect("/infobase/".$form2->id."/edit");
         }else{
             return view("form2.create");
         }

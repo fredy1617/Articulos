@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Base;
 use App\Revista;
+use App\Form2;
 use DB;
 
 class BaseController extends Controller
@@ -48,7 +49,7 @@ class BaseController extends Controller
     public function store(Request $request)
     {
         $base = new Base;
-        
+
         $base->id_Art=$request->id_Art;
         $base->titulo=$request->titulo;
         $base->year=$request->year;
@@ -84,8 +85,14 @@ class BaseController extends Controller
      */
     public function edit($id)
     {
-        $base = Base::find($id);
-        $base->revista;
+        
+        $form2 = Form2::find($id);
+        if ($form2!=null){ if (
+            $form2->Uncertainty=="Stocastic") {
+            
+            $ruta2='/Form7/create';}
+
+        $base = Base::find($form2->id_info);
 
         if ($base->tipo=="Pending") { $ruta='#'; }
         if ($base->tipo=="Tool") { $ruta='/Form1/create'; }
@@ -94,8 +101,25 @@ class BaseController extends Controller
         if ($base->tipo=="Report") { $ruta='/Form4/create'; }
         if ($base->tipo=="Review") { $ruta='/Form5/create'; }
         if ($base->tipo=="Theorist") { $ruta='/Form6/create'; }
+        }
+        
+        else  {
 
-        return view("base.vistabase", ["base" => $base],["ruta" => $ruta]);
+        $base = Base::find($id);
+
+        if ($base->tipo=="Pending") { $ruta='#'; }
+        if ($base->tipo=="Tool") { $ruta='/Form1/create'; }
+        if ($base->tipo=="Application") { $ruta='/Form2/create'; }
+        if ($base->tipo=="Energy Source") { $ruta='/Form3/create'; }
+        if ($base->tipo=="Report") { $ruta='/Form4/create'; }
+        if ($base->tipo=="Review") { $ruta='/Form5/create'; }
+        if ($base->tipo=="Theorist") { $ruta='/Form6/create'; }
+        $ruta2='#';
+        }
+
+       
+
+        return view("base.vistabase", ["base" => $base,"ruta" => $ruta],["form2" => $form2,"ruta2" => $ruta2]);
      }
 
     /**
