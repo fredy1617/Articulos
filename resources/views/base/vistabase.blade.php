@@ -38,14 +38,13 @@
 					<a type="button" class="btn btn-outline-info" href="{{url($ruta)}}">Completar</a>
 					
 				</td>
-				@else
-				@if ($form2->Uncertainty=="Stocastic")
+				
+				@endif
+				@if ($base->tipo=="Application")
 				<td>
-					<a type="button" class="btn btn-outline-info" href="{{url($ruta2)}}">Stocastic</a>
+					<a type="button" class="btn btn-outline-info" href="{{url($ruta2)}}">Esenarios</a>
 					
 				</td>
-				@endif
-				@endelse
 
 				@endif
 				

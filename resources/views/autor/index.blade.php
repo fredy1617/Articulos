@@ -12,7 +12,6 @@
 	<table class="table table-striped">
 		<thead>
 			<tr>
-				<td>Id</td>
 				<td>Articulo</td>
 				<td>Autor1</td>
 				<td>Autor2</td>
@@ -25,7 +24,6 @@
 		<tbody>
 			@foreach ($autor as $autores)
 			<tr>
-				<td>{{ $autores->id}}</td>
 				<td>{{ $autores->id_info}}</td>
 				<td>{{ $autores->Apellido_1.' '.$autores->Nombre_1}}</td>
 				<td>{{ $autores->Apellido_2.' '.$autores->Nombre_2}}</td>

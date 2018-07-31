@@ -215,9 +215,10 @@ class Form2Controller extends Controller
 
         
         $form2->save();
-
+        if ($form2->Uncertainty=="Stocastic"){$dir="/infobase/".$form2->id."/edit";}
+        else{$dir="/infobase/";}
         if($form2->save()){
-            return redirect("/infobase/".$form2->id."/edit");
+            return redirect($dir);
         }else{
             return view("form2.create");
         }

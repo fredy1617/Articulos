@@ -1,19 +1,96 @@
-@article{     0587,
-  title=      {A multi-region load dispatch model for the long-term optimum planning of China’s electricity sector},
-  author={Guo, Zheng and Cheng, Rui and Xu, Zhaofeng and Liu, Pei and Wang, Zhe and Li, Zheng and Jones, Ian and Sun, Yong},
-  journal={Applied energy},
-  volume={185},
-  pages={556--572},
+
+@article{0051,
+	title={A model for the multiperiod multiobjective power generation expansion problem},
+	author={Meza, Jose L Ceciliano and Yildirim, Mehmet Bayram and Masud, Abu SM},
+	journal={IEEE Transactions on Power Systems},
+	volume={22},
+	number={2},
+	pages={871--878},
+	year={2007},
+	publisher={IEEE}
+}
+@article{0052,
+	title={A multiobjective evolutionary programming algorithm and its applications to power generation expansion planning},
+	author={Meza, Jose L Ceciliano and Yildirim, Mehmet Bayram and Masud, Abu SM},
+	journal={IEEE Transactions on Systems, Man, and Cybernetics-Part A: Systems and Humans},
+	volume={39},
+	number={5},
+	pages={1086--1096},
+	year={2009},
+	publisher={IEEE}
+}
+@article{0053,
+	title={A multiple objective mixed integer linear programming model for power generation expansion planning},
+	author={Antunes, C Henggeler and Martins, A Gomes and Brito, Isabel Sofia},
+	journal={Energy},
+	volume={29},
+	number={4},
+	pages={613--627},
+	year={2004},
+	publisher={Elsevier}
+}
+@article{0054,
+  title={Modeling, planning, application and management of energy systems for isolated areas: A review},
+  author={Liu, Yanfeng and Yu, Sisi and Zhu, Ying and Wang, Dengjia and Liu, Jiaping},
+  journal={Renewable and Sustainable Energy Reviews},
+  volume={82},
+  pages={460--470},
+  year={2018},
+  publisher={Elsevier}
+}
+@article{0055,
+  title={Generation expansion planning in electricity market considering uncertainty in load demand and presence of strategic GENCOs},
+  author={Valinejad, Jaber and Marzband, Mousa and Akorede, Mudathir Funsho and Barforoshi, Taghi and Jovanovi{\'c}, Milutin},
+  journal={Electric Power Systems Research},
+  volume={152},
+  pages={92--104},
   year={2017},
   publisher={Elsevier}
 }
-@article{  0585,
-  title={Generation Expansion Planning With Large Amounts of Wind Power via Decision-Dependent Stochastic Programming},
-  author= {Zhan, Yiduo and Zheng, Qipeng P and Wang, Jianhui and Pinson, Pierre},
-  journal={IEEE Transactions on Power Systems},
-  volume={32},
-  number={4},
-  pages={3015--3026},
-  year= { 2017},
-  publisher={IEEE}
+@article{0056,
+  title={A review of energy planning practices of members of the Economic Community of West African States},
+  author={Lee, NC and Leal, VMS},
+  journal={Renewable and Sustainable Energy Reviews},
+  volume={31},
+  pages={202--220},
+  year={2014},
+  publisher={Elsevier}
+}
+@article{0057,
+  title={Review on integrated strategies for energy policy planning and evaluation of GHG mitigation alternatives},
+  author={Sreekanth, KJ},
+  journal={Renewable and Sustainable Energy Reviews},
+  volume={64},
+  pages={837--850},
+  year={2016},
+  publisher={Elsevier}
+}
+@article{0058,
+  title={Risk based multi-objective dynamic expansion planning of sub-transmission network in order to have eco-reliability, environmental friendly network with higher power quality},
+  author={Haghifam, Mahmoud Reza and others},
+  journal={IET Generation, Transmission \& Distribution},
+  volume={11},
+  number={1},
+  pages={261--271},
+  year={2017},
+  publisher={IET}
+}
+@article{0059,
+  title={Robustness methodology to aid multiobjective decision making in the electricity generation capacity expansion problem to minimize cost and water withdrawal},
+  author={Jornada, Daniel and Leon, V Jorge},
+  journal={Applied Energy},
+  volume={162},
+  pages={1089--1108},
+  year={2016},
+  publisher={Elsevier}
+}
+@article{0060,
+  title={An augmented NSGA-II technique with virtual database to solve the composite generation and transmission expansion planning problem},
+  author={Javadi, MS and Saniei, M and Rajabi Mashhadi, Habib},
+  journal={Journal of Experimental \& Theoretical Artificial Intelligence},
+  volume={26},
+  number={2},
+  pages={211--234},
+  year={2014},
+  publisher={Taylor \& Francis}
 }

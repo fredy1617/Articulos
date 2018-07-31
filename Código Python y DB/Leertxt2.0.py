@@ -54,7 +54,7 @@ def Todo():
                 x=(line[1].find('{'))+1
                 y=line[1].find('}')
                 author=line[1][x:y]
-                lista_autores=author.split('and')
+                lista_autores=author.split(' and ')
                 #print 'var Author:',lista_autores
                 registros['Authors']=lista_autores
             elif line[0]==['year']:
@@ -87,7 +87,6 @@ def Todo():
                         registros['Journal']=''
                     if not 'Type'in registros.keys():
                         registros['Type']='Pending'
-                    print registros
                     #VERIFICAMOS QUE NO SE REPITAN LOS ARTICULOS
                     if  Checar(registros['Title'])==True:
                         if askyesno('Verificar', 'El articulo:    ID  '+registros['ID']+'\n \n "'+registros['Title']+'" \n \n  Ya fue registrado ¿Desea GUARDARLO nuevamente?'):
@@ -189,16 +188,22 @@ def TableAutores(autores):
     columnas=""
     values=""
     cont=0
-    #SE CREA UN STRIG CON TODOS LOS NOMBRES Y SE RECORRE LA LISTA PARA INSERTAR TODO
+   #SE CREA UN STRIG CON TODOS LOS NOMBRES Y SE RECORRE LA LISTA PARA INSERTAR TODO
     for nombre in autores:
         cont+=1
-        separa=nombre.split(',')
-        if cont>1:
-            columnas+=","
-            values+=","
-        columnas+="`Nombre_"+str(cont)+"`,`Apellido_"+str(cont)+"`"
-        values+="'"+separa[1]+"','"+separa[0]+"'"   
-        
+        if not cont>5:
+            if cont>1:
+                    columnas+=","
+                    values+=","
+            separa=nombre.split(',')
+            if len(separa)==1:
+                print len(separa),separa
+                columnas+="`Nombre_"+str(cont)+"`,`Apellido_"+str(cont)+"`"
+                values+="'"+separa[0]+"','-'" 
+            else:
+                
+                columnas+="`Nombre_"+str(cont)+"`,`Apellido_"+str(cont)+"`"
+                values+="'"+separa[1]+"','"+separa[0]+"'"   
     for x in range(cont+1, 6):
         cont+=1
         if cont>1:
@@ -206,7 +211,7 @@ def TableAutores(autores):
             values+=","
         columnas+="`Nombre_"+str(cont)+"`,`Apellido_"+str(cont)+"`"
         values+="'-','-'"  
-        
+
      #SE OBTIENE EL ID DE BASE 
     cursor.execute("SELECT id FROM bases ORDER BY id DESC limit 1")
     id_base=str(list(cursor.fetchall())[0][0])
@@ -268,7 +273,7 @@ Enuncia2 = Label(vp, text = "2. Estructura del archivo  / Structure of the file 
 Enuncia2.grid(column = 2, row = 3)
 Enuncia2 = Label(vp, text = "2.1 Tiene que estar entre llaves '{ }'  / It has to be between keys '{ }' \n 2.2 Finalizar cada articulo con llave '}' / Finish each item with a key '}'  \n \n Ejemplo/ Example: \n",bg=Color,font=(Letras,12))
 Enuncia2.grid(column = 2, row = 4)
-Enuncia3 = Label(vp, text = "@article{0117,                  \ntitle={title} ,          \n author={author},   \n journal={journal}, \n year={2011} ,      \n}                                    \n",bg=Color,font=(Letras,12))
+Enuncia3 = Label(vp, text = "@article{0117,                  \ntitle={title} ,          \n.               author={lastname,name},   \n journal={journal}, \n year={2011} ,      \n}                                    \n",bg=Color,font=(Letras,12))
 Enuncia3.grid(column = 2, row = 5)
 #____________________________________________________________________
 

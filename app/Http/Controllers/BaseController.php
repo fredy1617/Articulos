@@ -19,9 +19,14 @@ class BaseController extends Controller
     public function index(Request $request)
     {
         $query=trim($request->get('searchText'));
-        $base =DB::table('bases')->where('titulo','LIKE','%'.$query.'%')
-        ->orderBy('id','desc')
-        ->paginate(8);
+        $base =DB::table('bases')
+        ->where('titulo','LIKE',$query.'%')
+        ->orwhere('tipo','LIKE',$query.'%')
+        ->orwhere('year','LIKE',$query)
+        ->orwhere('id_revista','LIKE',$query)
+
+        ->orderBy('id_Art','ASC')
+        ->paginate(30);
 
         
         return view('base.index', ["base" => $base, "searchText"=>$query]);
@@ -85,18 +90,22 @@ class BaseController extends Controller
      */
     public function edit($id)
     {
-        
+
         $form2 = Form2::find($id);
-        if ($form2!=null){ if (
-            $form2->Uncertainty=="Stocastic") {
-            
-            $ruta2='/Form7/create';}
+        if ($form2!=null){ 
+            if ($form2->Uncertainty=="Stocastic") {
+                $ruta2='/Form7/create';
+
+            }elseif ($form2->Uncertainty!="Stocastic") {
+                $ruta2='#';
+            }
+
 
         $base = Base::find($form2->id_info);
 
         if ($base->tipo=="Pending") { $ruta='#'; }
         if ($base->tipo=="Tool") { $ruta='/Form1/create'; }
-        if ($base->tipo=="Application") { $ruta='/Form2/create'; }
+        if ($base->tipo=="Application") { $ruta='#'; }
         if ($base->tipo=="Energy Source") { $ruta='/Form3/create'; }
         if ($base->tipo=="Report") { $ruta='/Form4/create'; }
         if ($base->tipo=="Review") { $ruta='/Form5/create'; }
