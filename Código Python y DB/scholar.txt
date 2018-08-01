@@ -1,96 +1,78 @@
-
-@article{0051,
-	title={A model for the multiperiod multiobjective power generation expansion problem},
-	author={Meza, Jose L Ceciliano and Yildirim, Mehmet Bayram and Masud, Abu SM},
-	journal={IEEE Transactions on Power Systems},
-	volume={22},
-	number={2},
-	pages={871--878},
-	year={2007},
-	publisher={IEEE}
-}
-@article{0052,
-	title={A multiobjective evolutionary programming algorithm and its applications to power generation expansion planning},
-	author={Meza, Jose L Ceciliano and Yildirim, Mehmet Bayram and Masud, Abu SM},
-	journal={IEEE Transactions on Systems, Man, and Cybernetics-Part A: Systems and Humans},
-	volume={39},
-	number={5},
-	pages={1086--1096},
-	year={2009},
-	publisher={IEEE}
-}
-@article{0053,
-	title={A multiple objective mixed integer linear programming model for power generation expansion planning},
-	author={Antunes, C Henggeler and Martins, A Gomes and Brito, Isabel Sofia},
-	journal={Energy},
-	volume={29},
-	number={4},
-	pages={613--627},
-	year={2004},
-	publisher={Elsevier}
-}
-@article{0054,
-  title={Modeling, planning, application and management of energy systems for isolated areas: A review},
-  author={Liu, Yanfeng and Yu, Sisi and Zhu, Ying and Wang, Dengjia and Liu, Jiaping},
-  journal={Renewable and Sustainable Energy Reviews},
-  volume={82},
-  pages={460--470},
-  year={2018},
-  publisher={Elsevier}
-}
-@article{0055,
-  title={Generation expansion planning in electricity market considering uncertainty in load demand and presence of strategic GENCOs},
-  author={Valinejad, Jaber and Marzband, Mousa and Akorede, Mudathir Funsho and Barforoshi, Taghi and Jovanovi{\'c}, Milutin},
-  journal={Electric Power Systems Research},
-  volume={152},
-  pages={92--104},
-  year={2017},
-  publisher={Elsevier}
-}
-@article{0056,
-  title={A review of energy planning practices of members of the Economic Community of West African States},
-  author={Lee, NC and Leal, VMS},
-  journal={Renewable and Sustainable Energy Reviews},
-  volume={31},
-  pages={202--220},
-  year={2014},
-  publisher={Elsevier}
-}
-@article{0057,
-  title={Review on integrated strategies for energy policy planning and evaluation of GHG mitigation alternatives},
-  author={Sreekanth, KJ},
-  journal={Renewable and Sustainable Energy Reviews},
-  volume={64},
-  pages={837--850},
-  year={2016},
-  publisher={Elsevier}
-}
-@article{0058,
-  title={Risk based multi-objective dynamic expansion planning of sub-transmission network in order to have eco-reliability, environmental friendly network with higher power quality},
-  author={Haghifam, Mahmoud Reza and others},
-  journal={IET Generation, Transmission \& Distribution},
-  volume={11},
-  number={1},
-  pages={261--271},
-  year={2017},
-  publisher={IET}
-}
-@article{0059,
-  title={Robustness methodology to aid multiobjective decision making in the electricity generation capacity expansion problem to minimize cost and water withdrawal},
-  author={Jornada, Daniel and Leon, V Jorge},
-  journal={Applied Energy},
-  volume={162},
-  pages={1089--1108},
-  year={2016},
-  publisher={Elsevier}
-}
-@article{0060,
-  title={An augmented NSGA-II technique with virtual database to solve the composite generation and transmission expansion planning problem},
-  author={Javadi, MS and Saniei, M and Rajabi Mashhadi, Habib},
-  journal={Journal of Experimental \& Theoretical Artificial Intelligence},
-  volume={26},
+@article{0101,
+  title={Combining bottom-up and top-down},
+  author={B{\"o}hringer, Christoph and Rutherford, Thomas F},
+  journal={Energy Economics},
+  volume={30},
   number={2},
-  pages={211--234},
-  year={2014},
-  publisher={Taylor \& Francis}
+  pages={574--596},
+  year={2008},
+  publisher={Elsevier}
+}
+@article{0102,
+  title={Informing energy and climate policies using energy systems models},
+  author={Giannakidis, George and Labriet, Maryse and O'Gallachoir, B and Tosato, G},
+  journal={Springer International Publishing, Switzerland. doi},
+  volume={10},
+  number={1007},
+  pages={978--3},
+  year={2015}
+}
+@article{0103,
+  title={The National Energy Modeling System: a large-scale energy-economic equilibrium model},
+  author={Gabriel, Steven A and Kydes, Andy S and Whitman, Peter},
+  journal={Operations Research},
+  volume={49},
+  number={1},
+  pages={14--25},
+  year={2001},
+  publisher={INFORMS}
+}
+@article{0104,
+  title={End use technology choice in the National Energy Modeling System (NEMS): An analysis of the residential and commercial building sectors},
+  author={Wilkerson, Jordan T and Cullenward, Danny and Davidian, Danielle and Weyant, John P},
+  journal={Energy Economics},
+  volume={40},
+  pages={773--784},
+  year={2013},
+  publisher={Elsevier}
+}
+@article{0105,
+  title={Annual energy outlook 2015: with projections to 2040},
+  journal={Washington, DC, USA: US Energy Information Administration, Office of Integrated and International Energy Analysis},
+  publisher={US Department of Energy}
+}
+@article{0106,
+  title={Optimization modeling to support renewables integration in power systems},
+  author={Pereira, S{\'e}rgio and Ferreira, Paula and Vaz, AIF},
+  journal={Renewable and Sustainable Energy Reviews},
+  volume={55},
+  pages={316--325},
+  year={2016},
+  publisher={Elsevier}
+}
+@article{0107,
+  title={An open source energy planning approach: SOFT-MESSAGE},
+  author={Howells, M and Rogner, I and Jalal, M},
+  journal={International Atomic Energy Agency},
+  year={2008},
+  publisher={International Energy WorkShop, Paris}
+}
+@article{0108,
+  title={SAMBA, The open source South American Model Base. A Brazilian Perspective on Long Term Power Systems Investment and Integration},
+  author={Moura, G and Howells, M and Legey, L},
+  year={2015},
+  publisher={Technical Report}
+}
+@article{0109,
+  title={Documentation for the MARKAL Family of Models},
+  author={Loulou, Richard and Goldstein, Gary and Noble, Ken and others},
+  journal={Energy Technology Systems Analysis Programme},
+  pages={65--73},
+  year={2004}
+}
+@article{0110,
+  title={Documentation for the TIMES Model Part I},
+  author={Loulou, Richard and Remme, Uwe and Kanudia, Amit and Lehtila, Antti and Goldstein, Gary},
+  journal={Energy Technology Systems Analysis Programme},
+  year={2005}
 }

@@ -82,7 +82,7 @@ def Todo():
                     if not 'Authors'in registros.keys():
                         registros['Authors']=''
                     if not 'Year'in registros.keys():
-                        registros['Year']=''
+                        registros['Year']='0'
                     if not 'Journal'in registros.keys():
                         registros['Journal']=''
                     if not 'Type'in registros.keys():
@@ -100,7 +100,7 @@ def Todo():
                             #SE LIMPIA EL DICCIONARIO PARA OTRO REGISTRO
                             registros={}
                         else:
-                           # print "No se INSERTA"
+                            print "No se INSERTA"
                             registros={}
                     else:
                         #INICIAMOS CON LA INSERCION DE LOS REGISTROS*******
