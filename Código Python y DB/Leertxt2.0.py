@@ -180,7 +180,7 @@ def TableBase(values):
         db.commit()
         return "---> 'SE INSERTO CORRECTAMENTE EL ARTICULO: "+values['ID']+" '<---"
     except:
-        return "---> ''NO!' FUE INSERTO EL ARTICULO: "+values['ID']+" '<---"
+        return " \n \n>>>>--->>>>''NO!'<<<<------<<<<< FUE INSERTO EL ARTICULO: "+values['ID']+" '<---\n \n"
 
         
 #-------------------------------------------------------------------------------------------    
@@ -197,7 +197,6 @@ def TableAutores(autores):
                     values+=","
             separa=nombre.split(',')
             if len(separa)==1:
-                print len(separa),separa
                 columnas+="`Nombre_"+str(cont)+"`,`Apellido_"+str(cont)+"`"
                 values+="'"+separa[0]+"','-'" 
             else:
@@ -223,7 +222,7 @@ def TableAutores(autores):
         db.commit()
         return "---> 'LOS AUTORES FUERON INSERTADOS'<---"
     except:
-        return "---> 'LOS AUTORES 'NO!' FUERON INSERTADOS'<---"   
+        return "\n \n---> 'LOS AUTORES >>>>--->>>>''NO!'<<<<------<<<<<  FUERON INSERTADOS'<---\n \n"   
         
     
 #-------------------------------------------------------------------------------------------    

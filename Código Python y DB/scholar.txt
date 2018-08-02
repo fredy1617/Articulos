@@ -1,78 +1,460 @@
-@article{0101,
-  title={Combining bottom-up and top-down},
-  author={B{\"o}hringer, Christoph and Rutherford, Thomas F},
+@article{0501,
+  title={The relationship between energy consumption, energy prices and economic growth: time series evidence from Asian developing countries},
+  author={Asafu-Adjaye, John},
+  journal={Energy economics},
+  volume={22},
+  number={6},
+  pages={615--625},
+  year={2000},
+  publisher={Elsevier}
+}
+@article{0502,
+  title={Modeling of end-use energy consumption in the residential sector: A review of modeling techniques},
+  author={Swan, Lukas G and Ugursal, V Ismet},
+  journal={Renewable and sustainable energy reviews},
+  volume={13},
+  number={8},
+  pages={1819--1835},
+  year={2009},
+  publisher={Elsevier}
+}
+@article{0503,
+  title={Energy consumption and economic growth: New insights into the cointegration relationship},
+  author={Belke, Ansgar and Dobnik, Frauke and Dreger, Christian},
   journal={Energy Economics},
+  volume={33},
+  number={5},
+  pages={782--789},
+  year={2011},
+  publisher={Elsevier}
+}
+@article{0504,
+  title={Electricity demand growth and the energy crisis},
+  author={Chapman, Duane and Tyrrell, Timothy and Mount, Timothy},
+  journal={Science},
+  volume={178},
+  number={4062},
+  pages={703--708},
+  year={1972},
+  publisher={JSTOR}
+}
+@article{0505,
+  title={Electricity consumption and economic growth in China},
+  author={Shiu, Alice and Lam, Pun-Lee},
+  journal={Energy policy},
+  volume={32},
+  number={1},
+  pages={47--54},
+  year={2004},
+  publisher={Elsevier}
+}
+@article{0506,
+  title={Electricity consumption and economic growth in India},
+  author={Ghosh, Sajal},
+  journal={Energy policy},
   volume={30},
   number={2},
-  pages={574--596},
-  year={2008},
+  pages={125--129},
+  year={2002},
   publisher={Elsevier}
 }
-@article{0102,
-  title={Informing energy and climate policies using energy systems models},
-  author={Giannakidis, George and Labriet, Maryse and O'Gallachoir, B and Tosato, G},
-  journal={Springer International Publishing, Switzerland. doi},
-  volume={10},
-  number={1007},
-  pages={978--3},
-  year={2015}
-}
-@article{0103,
-  title={The National Energy Modeling System: a large-scale energy-economic equilibrium model},
-  author={Gabriel, Steven A and Kydes, Andy S and Whitman, Peter},
-  journal={Operations Research},
-  volume={49},
-  number={1},
-  pages={14--25},
-  year={2001},
-  publisher={INFORMS}
-}
-@article{0104,
-  title={End use technology choice in the National Energy Modeling System (NEMS): An analysis of the residential and commercial building sectors},
-  author={Wilkerson, Jordan T and Cullenward, Danny and Davidian, Danielle and Weyant, John P},
-  journal={Energy Economics},
-  volume={40},
-  pages={773--784},
-  year={2013},
+@article{0507,
+  title={Electricity consumption and economic growth: exploring panel-specific differences},
+  author={Karanfil, Fatih and Li, Yuanjing},
+  journal={Energy Policy},
+  volume={82},
+  pages={264--277},
+  year={2015},
   publisher={Elsevier}
 }
-@article{0105,
-  title={Annual energy outlook 2015: with projections to 2040},
-  journal={Washington, DC, USA: US Energy Information Administration, Office of Integrated and International Energy Analysis},
-  publisher={US Department of Energy}
-}
-@article{0106,
-  title={Optimization modeling to support renewables integration in power systems},
-  author={Pereira, S{\'e}rgio and Ferreira, Paula and Vaz, AIF},
-  journal={Renewable and Sustainable Energy Reviews},
-  volume={55},
-  pages={316--325},
+@article{0508,
+  title={The effect of renewable energy consumption on economic growth: Evidence from top 38 countries},
+  author={Bhattacharya, Mita and Paramati, Sudharshan Reddy and Ozturk, Ilhan and Bhattacharya, Sankar},
+  journal={Applied Energy},
+  volume={162},
+  pages={733--741},
   year={2016},
   publisher={Elsevier}
 }
-@article{0107,
-  title={An open source energy planning approach: SOFT-MESSAGE},
-  author={Howells, M and Rogner, I and Jalal, M},
-  journal={International Atomic Energy Agency},
-  year={2008},
-  publisher={International Energy WorkShop, Paris}
-}
-@article{0108,
-  title={SAMBA, The open source South American Model Base. A Brazilian Perspective on Long Term Power Systems Investment and Integration},
-  author={Moura, G and Howells, M and Legey, L},
+@article{0509,
+  title={The impact of CO 2 emissions and economic growth on energy consumption in 58 countries},
+  author={Saidi, Kais and Hammami, Sami},
+  journal={Energy Reports},
+  volume={1},
+  pages={62--70},
   year={2015},
-  publisher={Technical Report}
+  publisher={Elsevier}
 }
-@article{0109,
-  title={Documentation for the MARKAL Family of Models},
-  author={Loulou, Richard and Goldstein, Gary and Noble, Ken and others},
-  journal={Energy Technology Systems Analysis Programme},
-  pages={65--73},
-  year={2004}
+@techreport{0510,
+  title={Cost and Performance Characteristics of New Generating Technologies, Annual Energy Outlook 2018},
+  author={US Energy Information Administration},
+  year={2018},
+  institution={EIA}
 }
-@article{0110,
-  title={Documentation for the TIMES Model Part I},
-  author={Loulou, Richard and Remme, Uwe and Kanudia, Amit and Lehtila, Antti and Goldstein, Gary},
-  journal={Energy Technology Systems Analysis Programme},
-  year={2005}
+@article{0511,
+  title={Social acceptance of renewable energy innovation: An introduction to the concept},
+  author={W{\"u}stenhagen, Rolf and Wolsink, Maarten and B{\"u}rer, Mary Jean},
+  journal={Energy policy},
+  volume={35},
+  number={5},
+  pages={2683--2691},
+  year={2007},
+  publisher={Elsevier}
+}
+@article{0512,
+title = "A GIS-based approach for electrification planning—A case study on Nigeria",
+journal = "Energy for Sustainable Development",
+volume = "29",
+pages = "142 - 150",
+year = "2015",
+issn = "0973-0826",
+doi = "https://doi.org/10.1016/j.esd.2015.09.007",
+url = "http://www.sciencedirect.com/science/article/pii/S0973082615000952",
+author = "Dimitrios Mentis and Manuel Welsch and Francesco Fuso Nerini and Oliver Broad and Mark Howells and Morgan Bazilian and Holger Rogner",
+keywords = "Electrification planning, GIS, Energy access"
+}
+@article{0513,
+title = "The benefits of geospatial planning in energy access – A case study on Ethiopia",
+journal = "Applied Geography",
+volume = "72",
+pages = "1 - 13",
+year = "2016",
+issn = "0143-6228",
+doi = "https://doi.org/10.1016/j.apgeog.2016.04.009",
+url = "http://www.sciencedirect.com/science/article/pii/S0143622816300522",
+author = "Dimitrios Mentis and Magnus Andersson and Mark Howells and Holger Rogner and Shahid Siyal and Oliver Broad and Alexandros Korkovelos and Morgan Bazilian",
+keywords = "GIS, Energy planning, Energy access"
+}
+@article{0514,
+  title={Energy models for decision making},
+  author={Ormerod, Richard John},
+  journal={European Journal of Operational Research},
+  volume={5},
+  number={6},
+  pages={366--377},
+  year={1980},
+  publisher={Elsevier}
+}
+@article{0515,
+  title={Optimization of energy production system in the Dodecanese Islands},
+  author={Koroneos, C and Zairis, N and Charaklias, P and Moussiopoulos, N},
+  journal={Renewable energy},
+  volume={30},
+  number={2},
+  pages={195--210},
+  year={2005},	
+  publisher={Elsevier}
+}
+@inproceedings{0516,
+  title={A long-term investment planning model for mixed energy infrastructure integrated with renewable energy},
+  author={Ding, Jinxu and Somani, Arun},
+  booktitle={Green Technologies Conference, 2010 IEEE},
+  pages={1--10},
+  year={2010},
+  organization={IEEE}
+}
+@article{0517,
+  title={A robust approach for planning electric power systems associated with environmental policy analysis},
+  author={Zhou, Y and Li, YP and Huang, GH},
+  journal={Electric Power Systems Research},
+  volume={95},
+  pages={99--111},
+  year={2013},
+  publisher={Elsevier}
+}
+@article{0518,
+  title={Direct employment in the wind energy sector: An EU study},
+  author={Blanco, Maria Isabel and Rodrigues, Gloria},
+  journal={Energy policy},
+  volume={37},
+  number={8},
+  pages={2847--2857},
+  year={2009},
+  publisher={Elsevier}
+}
+@article{0519,
+  title={Assessing employment in renewable energy technologies: A case study for wind power in Brazil},
+  author={Simas, Moana and Pacca, Sergio},
+  journal={Renewable and Sustainable Energy Reviews},
+  volume={31},
+  pages={83--90},
+  year={2014},
+  publisher={Elsevier}
+}
+@article{0520,
+  title={Creating the dataset for the western wind and solar integration study (USA)},
+  author={Potter, Cameron W and Lew, Debra and McCaa, Jim and Cheng, Sam and Eichelberger, Scott and Grimit, Eric},
+  journal={Wind Engineering},
+  volume={32},
+  number={4},
+  pages={325--338},
+  year={2008},
+  publisher={SAGE Publications Sage UK: London, England}
+}
+@article{0521,
+  title={Employment factors for wind and solar energy technologies: a literature review},
+  author={Cameron, Lachlan and Van Der Zwaan, Bob},
+  journal={Renewable and Sustainable Energy Reviews},
+  volume={45},
+  pages={160--172},
+  year={2015},
+  publisher={Elsevier}
+}
+@article{0522,
+  title={Comparative analysis of direct employment generated by renewable and non-renewable power plants},
+  author={Barros, Juan Jos{\'e} Cartelle and Coira, Manuel Lara and de la Cruz L{\'o}pez, Mar{\'\i}a Pilar and del Ca{\~n}o Gochi, Alfredo},
+  journal={Energy},
+  volume={139},
+  pages={542--554},
+  year={2017},
+  publisher={Elsevier}
+}
+@article{0523,
+  title={Representing operational flexibility in generation expansion planning through convex relaxation of unit commitment},
+  author={Hua, Bowen and Baldick, Ross and Wang, Jianhui},
+  journal={IEEE Transactions on Power Systems},
+  volume={33},
+  number={2},
+  pages={2272--2281},
+  year={2018},
+  publisher={IEEE}
+}
+@article{0524,
+  title={A stochastic adaptive robust optimization approach for the generation and transmission expansion planning},
+  author={Baringo, Luis and Baringo, Ana},
+  journal={IEEE Transactions on Power Systems},
+  volume={33},
+  number={1},
+  pages={792--802},
+  year={2018},
+  publisher={IEEE}
+}
+@article{0525,
+  title={Sustainable development enhanced in the decision process of electricity generation expansion planning},
+  author={de Lima, Gracieli Sart{\'o}rio Cardoso and Lopes, Elaine Coelho and Motta, Juliana Gutierrez and Asano Jr, Roberto and Valverde, Mar{\'\i}a and Suyama, Ricardo and Leite, Patricia Teixeira},
+  journal={Renewable Energy},
+  volume={123},
+  pages={563--577},
+  year={2018},
+  publisher={Elsevier}
+}
+@article{0526,
+  title={Robust dynamic transmission and renewable generation expansion planning: Walking towards sustainable systems},
+  author={Rold{\'a}n, Cristina and de la Nieta, AA S{\'a}nchez and Garc{\'\i}a-Bertrand, R and M{\'\i}nguez, R},
+  journal={International Journal of Electrical Power \& Energy Systems},
+  volume={96},
+  pages={52--63},
+  year={2018},
+  publisher={Elsevier}
+}
+@article{0527,
+  title={A generalized decomposition framework for large-scale transmission expansion planning},
+  author={Majidi-Qadikolai, Mohammad and Baldick, Ross},
+  journal={IEEE Transactions on Power Systems},
+  volume={33},
+  number={2},
+  pages={1635--1649},
+  year={2018},
+  publisher={IEEE}
+}
+@inproceedings{0528,
+  title={Capacity expansion model of wind power generation based on ELCC},
+  author={Yuan, Bo and Zong, Jin and Wu, Shengyu},
+  booktitle={IOP Conference Series: Earth and Environmental Science},
+  volume={121},
+  number={4},
+  pages={042020},
+  year={2018},
+  organization={IOP Publishing}
+}
+@article{0529,
+  title={Coordinated generation and transmission expansion planning for a power system under physical deliberate attacks},
+  author={Nemati, Hadi and Latify, Mohammad Amin and Yousefi, G Reza},
+  journal={International Journal of Electrical Power \& Energy Systems},
+  volume={96},
+  pages={208--221},
+  year={2018},
+  publisher={Elsevier}
+}
+@article{0530,
+  title={Multi-objective active distribution networks expansion planning by scenario-based stochastic programming considering uncertain and random weight of network},
+  author={Xie, Shiwei and Hu, Zhijian and Zhou, Daming and Li, Yan and Kong, Shunfei and Lin, Weiwei and Zheng, Yunfei},
+  journal={Applied Energy},
+  volume={219},
+  pages={207--225},
+  year={2018},
+  publisher={Elsevier}
+}
+@article{0531,
+  title={Renewable generation expansion under different support schemes: A stochastic equilibrium approach},
+  author={Pineda, Salvador and Boomsma, Trine K and Wogrin, Sonja},
+  journal={European Journal of Operational Research},
+  volume={266},
+  number={3},
+  pages={1086--1099},
+  year={2018},
+  publisher={Elsevier}
+}
+@article{0532,
+  title={A Multistage Decision-Dependent Stochastic Bi-level Programming Approach for Power Generation Investment Expansion Planning},
+  author={Zhan, Yiduo and Zheng, Qipeng P},
+  journal={IISE Transactions},
+  number={just-accepted},
+  pages={1--28},
+  year={2018},
+  publisher={Taylor \& Francis}
+}
+@article{0533,
+  title={Bundled Generation and Transmission Planning under Demand and Wind Generation Uncertainty based on a Combination of Robust and Stochastic Optimization},
+  author={Baharvandi, Arash and Aghaei, Jamshid and Niknam, Taher and Shafie-khah, Miadreza and Godina, Radu and Catal{\~a}o, Jo{\~a}o PS},
+  journal={IEEE Transactions on Sustainable Energy},
+  year={2018},
+  publisher={IEEE}
+}
+@article{0534,
+  title={Tri-level Expansion Planning for Transmission Networks and Distributed Energy Resources Considering Transmission Cost Allocation},
+  author={Wang, Jianxiao and Zhong, Haiwang and Tang, Wenyuan and Rajagopal, Ram and Xia, Qing and Kang, Chongqing},
+  journal={IEEE Transactions on Sustainable Energy},
+  year={2018},
+  publisher={IEEE}
+}
+@article{535,
+  title={Co-optimization of transmission expansion planning and TCSC placement considering the correlation between wind and demand scenarios},
+  author={Ziaee, Omid and Alizadeh-Mousavi, Omid and Choobineh, F Fred},
+  journal={IEEE Transactions on Power Systems},
+  volume={33},
+  number={1},
+  pages={206--215},
+  year={2018},
+  publisher={IEEE}
+}
+@inproceedings{0536,
+  title={Joint Expansion Planning for Natural Gas and Electric Transmission with Endogenous Market Feedbacks},
+  author={Bent, Russell and Blumsack, Seth and van Hentenryck, Pascal and Borraz Sanchez, Conrado and Backhaus, Scott},
+  booktitle={Proceedings of the 51st Hawaii International Conference on System Sciences},
+  year={2018}
+}
+@article{0537,
+  title={Advances in clean and low-carbon power generation planning},
+  author={Chen, Siyuan and Guo, Zheng and Liu, Pei and Li, Zheng},
+  journal={Computers \& Chemical Engineering},
+  year={2018},
+  publisher={Elsevier}
+}
+@article{0538,
+  title={Structural Decomposition Analysis of CO2 Emission Reduction due to Energy Tax in Power Sector Planning},
+  author={Marpaung, Charles OP and Shresta, Ram M},
+  journal={International Journal of Smart Grid and Sustainable Energy Technologies},
+  volume={1},
+  number={2},
+  pages={39--44},
+  year={2018}
+}
+@article{0539,
+  title={A novel multiobjective generation and transmission investment framework for implementing 100\% renewable energy sources},
+  author={Bagheri, Abed and Vahidinasab, Vahid and Mehran, Kamyar and others},
+  journal={IET Generation, Transmission \& Distribution},
+  year={2018},
+  publisher={IET}
+}
+@article{0540,
+  title={The multi-scale generation and transmission expansion model},
+  author={Sarid, A and Tzur, M},
+  journal={Energy},
+  volume={148},
+  pages={977--991},
+  year={2018},
+  publisher={Elsevier}
+}
+@article{0541,
+  title={Multistage stochastic investment planning with multiscale representation of uncertainties and decisions},
+  author={Liu, Yixian and Sioshansi, Ramteen and Conejo, Antonio J},
+  journal={IEEE Transactions on Power Systems},
+  volume={33},
+  number={1},
+  pages={781--791},
+  year={2018},
+  publisher={IEEE}
+}
+@article{0542,
+  title={Effects of carbon and environmental tax on power mix planning-A case study of Hebei Province, China},
+  author={Wang, B and Liu, L and Huang, GH and Li, W and Xie, YL},
+  journal={Energy},
+  volume={143},
+  pages={645--657},
+  year={2018},
+  publisher={Elsevier}
+}
+@article{0543,
+  title={Risk-based electric power system planning for climate change mitigation through multi-stage joint-probabilistic left-hand-side chance-constrained fractional programming: A Canadian case study},
+  author={Wang, Lin and Huang, Gordon and Wang, Xiuquan and Zhu, Hua},
+  journal={Renewable and Sustainable Energy Reviews},
+  volume={82},
+  pages={1056--1067},
+  year={2018},
+  publisher={Elsevier}
+}
+@article{0544,
+  title={Expansion planning for transmission network under demand uncertainty: A real options framework},
+  author={Kucuksayacigil, Fikri and Min, K Jo},
+  journal={The Engineering Economist},
+  volume={63},
+  number={1},
+  pages={20--53},
+  year={2018},
+  publisher={Taylor \& Francis}
+}
+@article{0545,
+  title={Co-planning of Investments in Transmission and Merchant Energy Storage},
+  author={Dvorkin, Yury and Fern{\'a}ndez-Blanco, Ricardo and Wang, Yishen and Xu, Bolun and Kirschen, Daniel S and Pand{\v{z}}i{\'c}, Hrvoje and Watson, Jean-Paul and Silva-Monroy, Cesar A},
+  journal={IEEE Transactions on Power Systems},
+  volume={33},
+  number={1},
+  pages={245--256},
+  year={2018},
+  publisher={IEEE}
+}
+@article{0546,
+  title={Towards More Resilient Integrated Power Grid Capacity Expansion: A Robust Optimization Approach with Operational Flexibility},
+  author={Caunhye, Aakil Mohammad and Cardin, Michel-Alexandre},
+  journal={Energy Economics},
+  year={2018},
+  publisher={Elsevier}
+}
+@article{0547,
+  title={Optimization techniques applied to planning of electric power distribution systems: a bibliographic survey},
+  author={Resener, Mariana and Haffner, S{\'e}rgio and Pereira, Lu{\'\i}s A and Pardalos, Panos M},
+  journal={Energy Systems},
+  pages={1--37},
+  year={2018},
+  publisher={Springer}
+}
+@article{0548,
+  title={Research on joint generation scheduling of cascade hydro plants in the dry season},
+  author={Xie, Mengfei and Zhou, Jianzhong and Ouyang, Wenyu and Yuan, Liu and Zhang, Hairong},
+  journal={Water Science and Technology: Water Supply},
+  volume={18},
+  number={1},
+  pages={193--202},
+  year={2018},
+  publisher={IWA Publishing}
+}
+@article{0549,
+  title={Optimal integration and planning of renewable distributed generation in the power distribution networks: A review of analytical techniques},
+  author={Ehsan, Ali and Yang, Qiang},
+  journal={Applied Energy},
+  volume={210},
+  pages={44--59},
+  year={2018},
+  publisher={Elsevier}
+}
+@article{0550,
+  title={BPSO Applied to TNEP Considering Adequacy Criterion},
+  author={Mahdavi, Meisam and Bagheri, Amir},
+  journal={American Journal of Neural Networks and Applications},
+  volume={4},
+  number={1},
+  pages={1--7},
+  year={2018},
+  publisher={Science Publishing Group}
 }

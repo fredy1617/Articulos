@@ -891,7 +891,7 @@
 }
 @article{0102,
   title={Informing energy and climate policies using energy systems models},
-  author={Giannakidis, George and Labriet, Maryse and O'Gallachoir, B and Tosato, G},
+  author={Giannakidis, George and Labriet, Maryse and O Gallachoir, B and Tosato, G},
   journal={Springer International Publishing, Switzerland. doi},
   volume={10},
   number={1007},
@@ -1246,7 +1246,7 @@
   publisher={Electronics and Telecommunications Research Institute}
 }
 @article{0142,
-  title={Reliable renewable generation and transmission expansion planning: Co-optimizing system's resources for meeting renewable targets},
+  title={Reliable renewable generation and transmission expansion planning: Co-optimizing systems resources for meeting renewable targets},
   author={Moreira, Alexandre and Pozo, David and Street, Alexandre and Sauma, Enzo},
   journal={IEEE Transactions on Power Systems},
   volume={32},
@@ -2503,7 +2503,7 @@
 }
 @article{0278,
   title={Accommodating variability in generation planning},
-  author={Shortt, Aonghus and Kiviluoma, Juha and O'Malley, Mark},
+  author={Shortt, Aonghus and Kiviluoma, Juha and O Malley, Mark},
   journal={IEEE Transactions on Power Systems},
   volume={28},
   number={1},
@@ -3475,7 +3475,7 @@
   publisher={IEEE}
 }
 @article{0389,
-  title={A new efficient GA-benders' decomposition method: For power generation expansion planning with emission controls},
+  title={A new efficient GA-benders decomposition method: For power generation expansion planning with emission controls},
   author={Sirikum, Jiraporn and Techanitisawad, Anulark and Kachitvichyanukul, Voratas},
   journal={IEEE Transactions on Power Systems},
   volume={22},
@@ -3595,14 +3595,14 @@
 }
 @inproceedings{0401,
   title={Generation portfolio analysis for a carbon constrained and uncertain future},
-  author={Doherty, Ronan and Outhred, H and O'Malley, MO},
+  author={Doherty, Ronan and Outhred, H and O Malley, MO},
   booktitle={Future Power Systems, 2005 International Conference on},
   pages={6--pp},
   year={2005},
   organization={IEEE}
 }
 @article{0402,
-  title={Analysis of the market penetration of clean coal technologies and its impacts in China's electricity sector},
+  title={Analysis of the market penetration of clean coal technologies and its impacts in China s electricity sector},
   author={Wang, Hao and Nakata, Toshihiko},
   journal={Energy Policy},
   volume={37},
@@ -3696,7 +3696,7 @@
   publisher={Elsevier}
 }
 @article{0412,
-  title={Scenario analysis of the new energy policy for Taiwan's electricity sector until 2025},
+  title={Scenario analysis of the new energy policy for Taiwan s electricity sector until 2025},
   author={Chen, Fung-Fei and Chou, Seng-Cho and Lu, Tai-Ken},
   journal={Energy policy},
   volume={61},
