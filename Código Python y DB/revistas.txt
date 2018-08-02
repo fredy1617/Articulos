@@ -4641,28 +4641,28 @@
   publisher={Elsevier}
 }
 @article{0512,
-title = "A GIS-based approach for electrification planning—A case study on Nigeria",
-journal = "Energy for Sustainable Development",
-volume = "29",
-pages = "142 - 150",
-year = "2015",
-issn = "0973-0826",
-doi = "https://doi.org/10.1016/j.esd.2015.09.007",
-url = "http://www.sciencedirect.com/science/article/pii/S0973082615000952",
-author = "Dimitrios Mentis and Manuel Welsch and Francesco Fuso Nerini and Oliver Broad and Mark Howells and Morgan Bazilian and Holger Rogner",
-keywords = "Electrification planning, GIS, Energy access"
+title = {A GIS-based approach for electrification planning—A case study on Nigeria},
+journal = {Energy for Sustainable Development},
+volume = {29},
+pages = {142 - 150},
+year = {2015},
+issn = {0973-0826},
+doi = {https://doi.org/10.1016/j.esd.2015.09.007},
+url = {http://www.sciencedirect.com/science/article/pii/S0973082615000952},
+author = {Dimitrios Mentis and Manuel Welsch and Francesco Fuso Nerini and Oliver Broad and Mark Howells and Morgan Bazilian and Holger Rogner},
+keywords = {Electrification planning, GIS, Energy access}
 }
 @article{0513,
-title = "The benefits of geospatial planning in energy access – A case study on Ethiopia",
-journal = "Applied Geography",
-volume = "72",
-pages = "1 - 13",
-year = "2016",
-issn = "0143-6228",
-doi = "https://doi.org/10.1016/j.apgeog.2016.04.009",
-url = "http://www.sciencedirect.com/science/article/pii/S0143622816300522",
-author = "Dimitrios Mentis and Magnus Andersson and Mark Howells and Holger Rogner and Shahid Siyal and Oliver Broad and Alexandros Korkovelos and Morgan Bazilian",
-keywords = "GIS, Energy planning, Energy access"
+title = {The benefits of geospatial planning in energy access – A case study on Ethiopia},
+journal = {Applied Geography},
+volume = {72},
+pages = {1 - 13},
+year = {2016},
+issn = {0143-6228},
+doi = {https://doi.org/10.1016/j.apgeog.2016.04.009},
+url = {http://www.sciencedirect.com/science/article/pii/S0143622816300522},
+author = {Dimitrios Mentis and Magnus Andersson and Mark Howells and Holger Rogner and Shahid Siyal and Oliver Broad and Alexandros Korkovelos and Morgan Bazilian},
+keywords = {GIS, Energy planning, Energy access}
 }
 @article{0514,
   title={Energy models for decision making},
@@ -4857,7 +4857,7 @@ keywords = "GIS, Energy planning, Energy access"
   year={2018},
   publisher={IEEE}
 }
-@article{535,
+@article{0535,
   title={Co-optimization of transmission expansion planning and TCSC placement considering the correlation between wind and demand scenarios},
   author={Ziaee, Omid and Alizadeh-Mousavi, Omid and Choobineh, F Fred},
   journal={IEEE Transactions on Power Systems},
@@ -5304,7 +5304,7 @@ keywords = "GIS, Energy planning, Energy access"
   publisher={IEEE}
 }
 @article{0586,
-  title={An integrated source-grid-load planning model at the macro level: Case study for China's power sector},
+  title={An integrated source-grid-load planning model at the macro level: Case study for China s power sector},
   author={Zhang, Ning and Hu, Zhaoguang and Shen, Bo and He, Gang and Zheng, Yanan},
   journal={Energy},
   volume={126},
@@ -5455,7 +5455,7 @@ keywords = "GIS, Energy planning, Energy access"
 }
 @article{0603,
   title={Generation and transmission expansion under risk using stochastic programming},
-  author={L{\'o}pez, Juan {\'A}lvarez and Ponnambalam, Kumaraswamy and Quintana, V{\'\i}ctor H},
+  author={López, Juan Álvarez and Ponnambalam, Kumaraswamy and Quintana, Víctor H},
   journal={IEEE Transactions on Power Systems},
   volume={22},
   number={3},
@@ -5475,7 +5475,7 @@ keywords = "GIS, Energy planning, Energy access"
 }
 @article{0605,
   title={Perspectives for Implementing Distributed Generation in Developing Countries through Modeling Techniques},
-  author={Fuentes-Cort{\'e}s, Luis Fabi{\'a}n and Ponce-Ortega, Jos{\'e} Mar{\'\i}a},
+  author={Fuentes-Cortés, Luis Fabián and Ponce-Ortega, José María},
   journal={ACS Sustainable Chemistry \& Engineering},
   volume={6},
   number={1},
@@ -5661,9 +5661,9 @@ keywords = "GIS, Energy planning, Energy access"
   journal={Computational Intelligent Data Analysis for Sustainable Development},
   year={2013}
 }
-ZZZZZZZZZZZZZZZ
 
- 
+
+
 
 
 @article{AAA,
