@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Form6;
 use App\Base;
+use App\Revista;
 
 class Form6Controller extends Controller
 {
@@ -14,6 +15,7 @@ class Form6Controller extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+    
     public function index()
     {
         return view("Form5.index");
@@ -24,12 +26,13 @@ class Form6Controller extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create($id)
     {
+        $bases=Base::find($id);
+        $revista=Revista::find($bases->id_revista);
         $form6 = new Form6;
-        $bases=Base::orderBy('titulo', 'ASC')->pluck('titulo', 'id');
         
-        return view("Form6.create", ["form6" => $form6])->with('bases', $bases);
+        return view("Form6.create", ["form6" => $form6])->with('base',$bases)->with('revista',$revista);
     }
 
     /**
@@ -38,10 +41,10 @@ class Form6Controller extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(Request $request, $id)
     {
         $form6 = new Form6;
-        $form6->id_info=$request->id_info;
+        $form6->id_info=$id;
 
         if ($request->Tema1==null  ) { $request->Tema1=''; }
         if ($request->Tema2==null ) { $request->Tema2=''; }

@@ -7,16 +7,16 @@
 	<div class="container white">
 		<h1>Completar Formulario(Report)</h1>
 		<!--formulario-->
-		{!! Form::open(['url'=> '/Form4/'.$form4->id, 'method'=>'POST']) !!}
-		<div class="form-group">
-			 <div class="form-group{{ $errors->has('id_info') ? ' has-error' : '' }}">
-				{{Form::select('id_info', $bases, null, ['class'=>'form-control', 'placeholder'=>'Selecciona el titulo de tu articulo  '] )}}
-					@if ($errors->has('id_info'))
-	                    <small class="text-danger">
-		                    <strong>{{ $errors->first('id_info') }}</strong>
-	                    </small>
-	                @endif
-	        </div>
+		{!! Form::open(['url'=> '/saveform4/'.$base->id, 'method'=>'POST']) !!}
+		<br>
+		<h4>Articulo</h4>
+		<div><h5><font color="#eeeeee"><h8>_____</h8></font>
+<b>Id:</b> {{ $base->id_Art }}<font color="#eeeeee"><h8>_____</h8></font>
+ <b>Título:</b> {{ $base->titulo }}</h5></div>
+		<h4>Revista</h4>
+		<div><h5><font color="#eeeeee"><h8>_____</h8></font>
+<b>Id:</b> {{ $revista->id }}<font color="#eeeeee"><h8>_____</h8></font>
+ <b>Título:</b> {{ $revista->nombre }}</h5></div><br>
 	        <div class="form-group{{ $errors->has('Keyboard') ? ' has-error' : '' }}">
 	            {{Form::text('Keyboard', $form4->Keyboard, ['class'=>'form-control', 'placeholder'=>'Keyboard '])}}
 	                @if ($errors->has('Keyboard'))

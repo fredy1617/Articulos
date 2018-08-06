@@ -16,6 +16,7 @@ class BaseController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+    
     public function index(Request $request)
     {
         $query=trim($request->get('searchText'));
@@ -104,12 +105,12 @@ class BaseController extends Controller
         $base = Base::find($form2->id_info);
 
         if ($base->tipo=="Pending") { $ruta='#'; }
-        if ($base->tipo=="Tool") { $ruta='/Form1/create'; }
+        if ($base->tipo=="Tool") { $ruta='/Form1/'.$base->id; }
         if ($base->tipo=="Application") { $ruta='#'; }
-        if ($base->tipo=="Energy Source") { $ruta='/Form3/create'; }
-        if ($base->tipo=="Report") { $ruta='/Form4/create'; }
-        if ($base->tipo=="Review") { $ruta='/Form5/create'; }
-        if ($base->tipo=="Theorist") { $ruta='/Form6/create'; }
+        if ($base->tipo=="Energy Source") { $ruta='/Form3/'.$base->id; }
+        if ($base->tipo=="Report") { $ruta='/Form4/'.$base->id; }
+        if ($base->tipo=="Review") { $ruta='/Form5/'.$base->id; }
+        if ($base->tipo=="Theorist") { $ruta='/Form6/'.$base->id; }
         }
         
         else  {
@@ -117,12 +118,12 @@ class BaseController extends Controller
         $base = Base::find($id);
 
         if ($base->tipo=="Pending") { $ruta='#'; }
-        if ($base->tipo=="Tool") { $ruta='/Form1/create'; }
-        if ($base->tipo=="Application") { $ruta='/Form2/create'; }
-        if ($base->tipo=="Energy Source") { $ruta='/Form3/create'; }
-        if ($base->tipo=="Report") { $ruta='/Form4/create'; }
-        if ($base->tipo=="Review") { $ruta='/Form5/create'; }
-        if ($base->tipo=="Theorist") { $ruta='/Form6/create'; }
+        if ($base->tipo=="Tool") { $ruta='/Form1/'.$base->id; }
+        if ($base->tipo=="Application") { $ruta='/Form2/'.$base->id; }
+        if ($base->tipo=="Energy Source") { $ruta='/Form3/'.$base->id; }
+        if ($base->tipo=="Report") { $ruta='/Form4/'.$base->id; }
+        if ($base->tipo=="Review") { $ruta='/Form5/'.$base->id; }
+        if ($base->tipo=="Theorist") { $ruta='/Form6/'.$base->id; }
         $ruta2='#';
         }
 

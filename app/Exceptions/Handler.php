@@ -48,6 +48,11 @@ class Handler extends ExceptionHandler
      */
     public function render($request, Exception $exception)
     {
+        if($exception instanceof \Illuminate\Auth\AuthenticationException)
+        {
+            return redirect('/');
+
+        }
         return parent::render($request, $exception);
     }
 }
