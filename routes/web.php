@@ -19,7 +19,7 @@ Route::resource('infobase', 'BaseController');
 Route::resource('autor', 'AutorController');
 Route::resource('tema', 'TemaController');
 
-Route::get('autor/{id}', 'AutorController@create');
+Route::get('crear/{id}', 'AutorController@create');
 Route::get('Form1/{id}', 'Form1Controller@create');
 Route::get('Form2/{id}', 'Form2Controller@create');
 Route::get('Form3/{id}', 'Form3Controller@create');

@@ -41,12 +41,12 @@
 				<td>MILP/MINLP</td><td>__D.P.___</td><td>Bi_Level</td><td>__G.T.___</td>
 				<td>Uncertainty</td><td>Solve_Method</td>
 				<td>Focus_Type</td><td>Math_Type</td>
-				<td>Cost</td>
+				<td>_Cost___</td>
 				<td>CO2_Emissions</td>
-				<td>Import Fuel</td>
+				<td>Import_Fuel</td>
 				<td>Reliatibity</td>
 				<td>Water withdrawal</td>
-				<td>Price fuel risk</td>
+				<td>Price_fuel_risk</td>
 				<td>Constraist violation</td>
 				<td>Power flow</td><td>Node balance</td>
 				<td>Generation capacity</td>

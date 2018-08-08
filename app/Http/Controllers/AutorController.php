@@ -14,10 +14,7 @@ class AutorController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function __construct()
-    {
-        $this->middleware('auth');
-    }
+   
     public function index()
     {
         $autor = Autor::all();
@@ -33,8 +30,8 @@ class AutorController extends Controller
      */
     public function create($id)
     { 
-        $autor = new autor;
-        return view("autor.create",["autor" => $autor],compact('id'));
+        $autor = new Autor;
+        return view("autor.create",["autor" => $autor,"id"=>$id]);
     }
 
     /**
@@ -43,11 +40,21 @@ class AutorController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request , $id)
+    public function store(Request $request, $id)
     {
         $autor = new Autor;
 
         $autor->id_info=$id;
+        if ($request->Nombre_1==null) { $request->Nombre_1='-'; }
+        if ($request->Nombre_2==null) { $request->Nombre_2='-'; }
+        if ($request->Nombre_3==null) { $request->Nombre_3='-'; }
+        if ($request->Nombre_4==null) { $request->Nombre_4='-'; }
+        if ($request->Nombre_5==null) { $request->Nombre_5='-'; }
+        if ($request->Apellido_1==null) { $request->Apellido_1='-'; }
+        if ($request->Apellido_2==null) { $request->Apellido_2='-'; }
+        if ($request->Apellido_3==null) { $request->Apellido_3='-'; }
+        if ($request->Apellido_4==null) { $request->Apellido_4='-'; }
+        if ($request->Apellido_5==null) { $request->Apellido_5='-'; }
         
         $autor->Nombre_1=$request->Nombre_1;
         $autor->Apellido_1=$request->Apellido_1;

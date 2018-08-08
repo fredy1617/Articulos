@@ -29,17 +29,18 @@
 				<td colspan="3">{!! Form::select('Transmission',[''=>'...','1'=>'1','0'=>'0'] ,null,['class'=>'form-control']) !!}</td>
 				<td colspan="3">{!! Form::select('Fuel',[''=>'...','1'=>'1','0'=>'0'] ,null,['class'=>'form-control']) !!}</td>
 				<td colspan="4">{!! Form::select('Operation',[''=>'...','1'=>'1','0'=>'0'] ,null,['class'=>'form-control']) !!}</td>
-				<td colspan="2">Storage</td>
-				<td colspan="5">Finacial & Economical</td>
-				<td colspan="3">Envioramental</td>
-				<td colspan="5">Renewable Source</td>
-				<td colspan="4">Other</td>
+				<td colspan="2">{!! Form::select('Storage',[''=>'...','1'=>'1','0'=>'0'] ,null,['class'=>'form-control']) !!}</td>
+				<td colspan="5">{!! Form::select('Finacial',[''=>'...','1'=>'1','0'=>'0'] ,null,['class'=>'form-control']) !!}</td>
+				<td colspan="3">{!! Form::select('Envioramental',[''=>'...','1'=>'1','0'=>'0'] ,null,['class'=>'form-control']) !!}</td>
+				<td colspan="5">{!! Form::select('Renewable',[''=>'...','1'=>'1','0'=>'0'] ,null,['class'=>'form-control']) !!}</td>
+				<td colspan="4">{!! Form::select('Other',[''=>'...','1'=>'1','0'=>'0'] ,null,['class'=>'form-control']) !!}</td>
+				<td><span class="input-group-btn">
+			<button type="submit" class="btn btn-primary"> Buscar </button>		
+		</span></td>
 			</tr>
 
 		
-		<span class="input-group-btn">
-			<button type="submit" class="btn btn-primary"> Buscar </button>		
-		</span>
+		
 	</div>
 </div>
 {{Form::close()}}

@@ -66,7 +66,7 @@ class BaseController extends Controller
         $base->save();
 
         if($base->save()){
-            return redirect("/infobase/");
+            return redirect("/crear/".$base->id);
         }else{
             return view("base.create");
         }

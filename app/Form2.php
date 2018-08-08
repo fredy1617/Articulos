@@ -243,29 +243,49 @@ class Form2 extends Model
     {
         if(trim($Storage) !="")
         {
-            $query->where('Spinning_reserve',$Storage)
-            ->orwhere('Operating_reserve',$Storage);
+            $query->where('Pumping_water',$Storage)
+            ->orwhere('ESS_constraints',$Storage);
         }   
     }
     public function scopeFinacial($query, $Finacial)
     {
         if(trim($Finacial) !="")
         {
-            $query->where('Spinning_reserve',$Finacial)
-            ->orwhere('Operating_reserve',$Finacial)
-            ->orwhere('Reserve_Margin',$Finacial)
-            ->orwhere('Op_Reliability',$Finacial)
-            ->orwhere('Op_Reliability',$Finacial);
+            $query->where('Unit_Operating_cost',$Finacial)
+            ->orwhere('Annual_budget',$Finacial)
+            ->orwhere('Maximun_investment',$Finacial)
+            ->orwhere('Sold_energy',$Finacial)
+            ->orwhere('Market_Power',$Finacial);
         }   
     }
     public function scopeEnvioramental($query, $Envioramental)
     {
         if(trim($Envioramental) !="")
         {
-            $query->where('Spinning_reserve',$Envioramental)
-            ->orwhere('Operating_reserve',$Envioramental)
-            ->orwhere('Reserve_Margin',$Envioramental)
-            ->orwhere('Op_Reliability',$Envioramental);
+            $query->where('Emissions',$Envioramental)
+            ->orwhere('Emissions_target',$Envioramental)
+            ->orwhere('Emissions_markets',$Envioramental);
+        }   
+    }
+    public function scopeRenewable($query, $Renewable)
+    {
+        if(trim($Renewable) !="")
+        {
+            $query->where('Penetration_Potential',$Renewable)
+            ->orwhere('Max_RES_penetration',$Renewable)
+            ->orwhere('Min_RES_contribution',$Renewable)
+            ->orwhere('RES_target',$Renewable)
+            ->orwhere('RPS',$Renewable);
+        }   
+    }
+    public function scopeOther($query, $Other)
+    {
+        if(trim($Other) !="")
+        {
+            $query->where('Heat_consumption',$Other)
+            ->orwhere('Unit_clustering',$Other)
+            ->orwhere('Interconexion',$Other)
+            ->orwhere('DSM_projects',$Other);
         }   
     }
 

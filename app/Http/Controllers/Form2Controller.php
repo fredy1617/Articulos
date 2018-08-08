@@ -45,6 +45,11 @@ class Form2Controller extends Controller
         ->plants_other($request->get('plants_other'))
         ->Transmission($request->get('Transmission'))
         ->Fuel($request->get('Fuel'))
+        ->Storage($request->get('Storage'))
+        ->Finacial($request->get('Finacial'))
+        ->Envioramental($request->get('Envioramental'))
+        ->Renewable($request->get('Renewable'))
+        ->Other($request->get('Other'))
         ->orderBy('id_info','ASC')
         ->paginate(40);
 
