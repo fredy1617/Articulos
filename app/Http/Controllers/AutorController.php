@@ -31,9 +31,10 @@ class AutorController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
-    {
-        //
+    public function create($id)
+    { 
+        $autor = new autor;
+        return view("autor.create",["autor" => $autor],compact('id'));
     }
 
     /**
@@ -42,9 +43,30 @@ class AutorController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(Request , $id)
     {
-       //
+        $autor = new Autor;
+
+        $autor->id_info=$id;
+        
+        $autor->Nombre_1=$request->Nombre_1;
+        $autor->Apellido_1=$request->Apellido_1;
+        $autor->Nombre_2=$request->Nombre_2;
+        $autor->Apellido_2=$request->Apellido_2;
+        $autor->Nombre_3=$request->Nombre_3;
+        $autor->Apellido_3=$request->Apellido_3;
+        $autor->Nombre_4=$request->Nombre_4;
+        $autor->Apellido_4=$request->Apellido_4;
+        $autor->Nombre_5=$request->Nombre_5;
+        $autor->Apellido_5=$request->Apellido_5;
+        
+        $autor->save();
+
+        if($autor->save()){
+            return redirect("/infobase/");
+        }else{
+            return view("autor.create");
+        }
     }
 
     /**

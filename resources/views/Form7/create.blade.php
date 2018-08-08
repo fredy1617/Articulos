@@ -5,9 +5,9 @@
 @endsection
 @section("content")
 
-    	
+    	{!! Form::open(['url'=> '/saveform7/'.$id, 'method'=>'POST']) !!}
 	<div class="container white">
-		<h1>Esenarios</h1>
+		<h1>Esenarios</h1><br>
         	<div class="form-group{{ $errors->has('Fuel_Price', 'Inv_Cos', 'Ope_Cos','Energy_Price','GENCO', 'Budget','CO2_Price','Demand','RES_target','RPS','Thermal_Generation', 'RE_Source', 'Wind','Solar','Hydro', 'Nuclear','Environmental','Water','Elctric_Car','Policies') ? ' has-error' : '' }}">
         		<table>
         		<tr>
@@ -162,6 +162,11 @@
 	            </tr>
 	        </table>
 	        </div>
+
+		<div class="form-group text-right">
+			<input type="submit"  value="Enviar" class="btn btn-success">
+		</div>
+			{!! Form::close() !!}
 
 	</div>
 @endsection

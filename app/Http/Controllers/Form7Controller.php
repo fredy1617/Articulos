@@ -24,9 +24,10 @@ class Form7Controller extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create($id)
     {
-        return view("Form7.create");
+        $form7 = new Form7;
+        return view("Form7.create",["form7" => $form7],compact('id'));
     }
 
     /**
@@ -35,33 +36,60 @@ class Form7Controller extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(Request $request, $id)
     {
         $form7 = new Form7;
-        $form6->id_info=$request->id_info;
+        $form7->id_app=$id;
 
-        if ($request->Tema1==null  ) { $request->Tema1=''; }
-        if ($request->Tema2==null ) { $request->Tema2=''; }
-        if ($request->Tema3==null ) { $request->Tema3=''; }
-        if ($request->Tema4==null  ) { $request->Tema4=''; }
+        if ($request->Fuel_Price==null  ) { $request->Fuel_Price=0; }
+        if ($request->Inv_Cos==null ) { $request->Inv_Cos=0; }
+        if ($request->Ope_Cos==null ) { $request->Ope_Cos=0; }
+        if ($request->Energy_Price==null  ) { $request->Energy_Price=0; }
+        if ($request->GENCO==null  ) { $request->GENCO=0; }
+        if ($request->Budget==null ) { $request->Budget=0; }
+        if ($request->CO2_Price==null ) { $request->CO2_Price=0; }
+        if ($request->Demand==null  ) { $request->Demand=0; }
+        if ($request->RES_target==null  ) { $request->RES_target=0; }
+        if ($request->RPS==null ) { $request->RPS=0; }
+        if ($request->Thermal_Generation==null ) { $request->Thermal_Generation=0; }
+        if ($request->RE_Source==null  ) { $request->RE_Source=0; }
+        if ($request->Wind==null  ) { $request->Wind=0; }
+        if ($request->Solar==null ) { $request->Solar=0; }
+        if ($request->Hydro==null ) { $request->Hydro=0; }
+        if ($request->Nuclear==null  ) { $request->Nuclear=0; }
+        if ($request->Environmental==null  ) { $request->Environmental=0; }
+        if ($request->Water==null ) { $request->Water=0; }
+        if ($request->Elctric_Car==null ) { $request->Elctric_Car=0; }
+        if ($request->Policies==null  ) { $request->Policies=0; }
 
-        $form6->Tema1=$request->Tema1;
-        $form6->Tema2=$request->Tema2;
-        $form6->Tema3=$request->Tema3;
-        $form6->Tema4=$request->Tema4;
+        $form7->Fuel_Price=$request->Fuel_Price;
+        $form7->Inv_Cos=$request->Inv_Cos;
+        $form7->Ope_Cos=$request->Ope_Cos;
+        $form7->Energy_Price=$request->Energy_Price;
+        $form7->GENCO=$request->GENCO;
+        $form7->Budget=$request->Budget;
+        $form7->CO2_Price=$request->CO2_Price;
+        $form7->Demand=$request->Demand;
+        $form7->RES_target=$request->RES_target;
+        $form7->RPS=$request->RPS;
+        $form7->Thermal_Generation=$request->Thermal_Generation;
+        $form7->RE_Source=$request->RE_Source;
+        $form7->Wind=$request->Wind;
+        $form7->Solar=$request->Solar;
+        $form7->Hydro=$request->Hydro;
+        $form7->Nuclear=$request->Nuclear;
+        $form7->Environmental=$request->Environmental;
+        $form7->Water=$request->Water;
+        $form7->Elctric_Car=$request->Elctric_Car;
+        $form7->Policies=$request->Policies;
 
-        $form6->Algorithms_Tecnologies=$request->Algorithms_Tecnologies;
-        $form6->Keyboard=$request->Keyboard;
-        $form6->Abstract=$request->Abstract;
+        $form7->save();
 
-        $form6->save();
-
-        if($form6->save()){
+        if($form7->save()){
             return redirect("/infobase");
         }else{
-            return view("form6.create");
+            return view("form7.create");
         }
-    }
     }
 
     /**

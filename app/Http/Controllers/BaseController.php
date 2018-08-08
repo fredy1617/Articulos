@@ -27,7 +27,7 @@ class BaseController extends Controller
         ->orwhere('id_revista','LIKE',$query)
 
         ->orderBy('id_Art','ASC')
-        ->paginate(30);
+        ->paginate(40);
 
         
         return view('base.index', ["base" => $base, "searchText"=>$query]);
@@ -95,7 +95,7 @@ class BaseController extends Controller
         $form2 = Form2::find($id);
         if ($form2!=null){ 
             if ($form2->Uncertainty=="Stocastic") {
-                $ruta2='/Form7/create';
+                $ruta2='/Form7/'.$form2->id;
 
             }elseif ($form2->Uncertainty!="Stocastic") {
                 $ruta2='#';

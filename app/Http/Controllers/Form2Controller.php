@@ -7,6 +7,7 @@ use App\Http\Controllers\Controller;
 use App\Form2;
 use App\Base;
 use App\Revista;
+use DB;
 
 class Form2Controller extends Controller
 {
@@ -16,9 +17,38 @@ class Form2Controller extends Controller
      * @return \Illuminate\Http\Response
      */
    
-    public function index()
+    public function index(Request $request)
     {
-        //
+        $form2 = Form2::Idkey($request->get('name'))
+        ->Pais($request->get('pais'))
+        ->PH($request->get('PH'))
+        ->TP($request->get('TP'))
+        ->BT($request->get('BT'))
+        ->Math($request->get('math'))
+        ->DP($request->get('DP'))
+        ->Bi($request->get('Bi'))
+        ->GT($request->get('GT'))
+        ->Uncertainty($request->get('Uncertainty'))
+        ->Solve($request->get('Solve'))
+        ->FT($request->get('FT'))
+        ->MT($request->get('MT'))
+        ->Cost($request->get('Cost'))
+        ->CO2($request->get('CO2'))
+        ->Import($request->get('Import'))
+        ->Reliatibity($request->get('Reliatibity'))
+        ->Water($request->get('Water'))
+        ->Price($request->get('Price'))
+        ->Constraist($request->get('Constraist'))
+        ->Demand($request->get('Demand'))
+        ->plants_planning($request->get('plants_planning'))
+        ->plants_operation($request->get('plants_operation'))
+        ->plants_other($request->get('plants_other'))
+        ->Transmission($request->get('Transmission'))
+        ->Fuel($request->get('Fuel'))
+        ->orderBy('id_info','ASC')
+        ->paginate(40);
+
+        return view('Form2.index', ["form2" => $form2]);
     }
 
     /**
