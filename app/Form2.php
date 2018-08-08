@@ -236,7 +236,7 @@ class Form2 extends Model
             $query->where('Spinning_reserve',$Operation)
             ->orwhere('Operating_reserve',$Operation)
             ->orwhere('Reserve_Margin',$Operation)
-            ->orwhere('Op_Reliability',$Operation;
+            ->orwhere('Op_Reliability',$Operation);
         }   
     }
     public function scopeStorage($query, $Storage)
